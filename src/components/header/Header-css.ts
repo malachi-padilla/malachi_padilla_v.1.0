@@ -35,7 +35,12 @@ export const LogoContainer = styled.div`
 		height: 100%;
 		width: auto;
 		aspect-ratio: 1;
-		animation: ${spin} 1s alternate ease-out;
+		animation: ${spin} 1.5s alternate ease-out;
+		transition: transform 1.5s ease-out;
+		&:hover {
+			transform: rotate(360deg);
+			cursor: pointer;
+		}
 	}
 `;
 
@@ -61,6 +66,4 @@ export const LinkItem = styled.li`
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #fff;
 `;

@@ -8,13 +8,13 @@ interface link {
 	path: string;
 }
 
-const Header = () => {
-	const navLinks: link[] = [
-		{ name: 'About', path: '#' },
-		{ name: 'Projects', path: '#' },
-		{ name: 'Contact', path: '#' },
-	];
+const navLinks: link[] = [
+	{ name: 'About', path: '#' },
+	{ name: 'Projects', path: '#' },
+	{ name: 'Contact', path: '#' },
+];
 
+const Header = () => {
 	return (
 		<HeaderWrapper>
 			<HeaderLeft>
