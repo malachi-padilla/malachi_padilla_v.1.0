@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { HeaderLeft, HeaderRight, HeaderWrapper, LinkItem, LinkList } from './Header-css';
+import { HeaderLeft, HeaderRight, HeaderWrapper, LinkItem, LinkList, LogoContainer } from './Header-css';
+import logo from '../../assets/logo.svg';
+import Image from 'next/image';
 
 interface link {
 	name: string;
@@ -15,7 +17,11 @@ const Header = () => {
 
 	return (
 		<HeaderWrapper>
-			<HeaderLeft></HeaderLeft>
+			<HeaderLeft>
+				<LogoContainer>
+					<Image src={logo} alt='malachi padilla' />
+				</LogoContainer>
+			</HeaderLeft>
 			<HeaderRight>
 				<LinkList>
 					{navLinks.map((link, index) => (

@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const spin = keyframes`
+0%{
+transform:rotate(0deg)
+}
+100%{
+transform:rotate(360deg);
+}
+`;
 
 export const HeaderWrapper = styled.div`
 	display: flex;
@@ -6,7 +15,7 @@ export const HeaderWrapper = styled.div`
 	height: 10vh;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0 7rem;
+	padding: 0 4rem;
 `;
 
 export const HeaderLeft = styled.div`
@@ -15,6 +24,19 @@ export const HeaderLeft = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+`;
+
+export const LogoContainer = styled.div`
+	height: 100%;
+	width: fit-content;
+	justify-content: flex-start;
+	align-items: center;
+	img {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 1;
+		animation: ${spin} 1s alternate ease-out;
+	}
 `;
 
 export const HeaderRight = styled.div`
@@ -35,5 +57,10 @@ export const LinkList = styled.ul`
 `;
 
 export const LinkItem = styled.li`
-	font-size: 1.6rem;
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
 `;
