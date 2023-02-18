@@ -30,7 +30,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: ${rubik.style.fontFamily};
 	background-color: #0b090a;
-	color: #fff;
 }
 
 img,

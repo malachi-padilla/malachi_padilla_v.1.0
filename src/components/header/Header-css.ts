@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+interface linkProps {
+	name: string;
+}
+
 const spin = keyframes`
 0%{
 transform:rotate(0deg)
@@ -58,12 +62,42 @@ export const LinkList = styled.ul`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 3.2rem;
+	gap: 1.6rem;
 `;
 
-export const LinkItem = styled.li`
-	font-size: 2rem;
-	font-weight: 900;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+export const LinkItem = styled.li<linkProps>`
+	overflow: hidden;
+	& a {
+		font-size: 1.6rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		-webkit-text-stroke: 1px #fff;
+		color: transparent;
+		position: relative;
+		height: fit-content;
+		width: fit-content;
+
+		&::before {
+			content: '${(props) => props.name}';
+			position: absolute;
+			/* ----first animation---- */
+
+			width: 0%;
+			color: #fff;
+			overflow: hidden;
+
+			/* ----second animation---- */
+
+			/* background-color: #fff;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transform: translateY(100%);*/
+
+			transition: all 450ms;
+		}
+		&:hover::before {
+			/* transform: translateY(0%); */
+			width: 100%;
+		}
+	}
 `;

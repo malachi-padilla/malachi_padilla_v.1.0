@@ -36,5 +36,5 @@ export const Blob = styled.div`
 	z-index: 1;
 	background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
 	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-	animation: ${blobBehavior} 10s linear infinite;
+	animation: ${blobBehavior} 5s linear infinite;
 `;

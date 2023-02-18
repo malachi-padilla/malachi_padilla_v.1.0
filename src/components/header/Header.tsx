@@ -18,14 +18,14 @@ const Header = () => {
 	return (
 		<HeaderWrapper>
 			<HeaderLeft>
-				<LogoContainer>
+				<LogoContainer as={Link as any} href='/'>
 					<Image src={logo} alt='malachi padilla' />
 				</LogoContainer>
 			</HeaderLeft>
 			<HeaderRight>
 				<LinkList>
 					{navLinks.map((link, index) => (
-						<LinkItem key={index}>
+						<LinkItem key={index} name={link.name}>
 							<Link href={link.path}>{link.name}</Link>
 						</LinkItem>
 					))}
