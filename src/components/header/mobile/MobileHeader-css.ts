@@ -90,23 +90,12 @@ export const MobileLinkItem = styled.li<linkProps>`
 		&::before {
 			content: '${(props) => props.name}';
 			position: absolute;
-			/* ----first animation---- */
-
 			width: 0%;
 			color: #fff;
 			overflow: hidden;
-
-			/* ----second animation---- */
-
-			/* background-color: #fff;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			transform: translateY(100%);*/
-
 			transition: all 450ms;
 		}
 		&:hover::before {
-			/* transform: translateY(0%); */
 			width: 100%;
 		}
 	}
