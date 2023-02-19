@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-interface linkProps {
+export interface linkProps {
 	name: string;
 }
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { linkProps } from '../Header-css';
 
 interface BurgerProps {
 	open: boolean;
@@ -13,7 +14,7 @@ export const MobileHeaderWrapper = styled.div`
 	padding: 0 1rem;
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: 1;
 	backdrop-filter: blur(5rem);
 `;
 
@@ -26,6 +27,7 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	z-index: 3;
 	span {
 		height: 0.2rem;
 		border-radius: 0.2rem;
@@ -50,32 +52,62 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	}
 `;
 
-export const BurgerMenuClose = styled.button`
+export const MobileNavWrapper = styled.nav<BurgerProps>`
+	height: 100vh;
+	width: ${(props) => (props.open ? '70%' : '0')};
+	background-color: #0b090a;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	overflow: hidden;
+	transition: all 250ms;
+`;
+export const MobileLinkList = styled.ul`
 	height: 100%;
-	width: fit-content;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+	width: 100%;
+	flex-grow: 1;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
-	position: relative;
-	span {
-		height: 0.2rem;
-		border-radius: 0.2rem;
-		background-color: #fff;
-		transition: all 450ms;
-		position: absolute;
-		width: 5rem;
-	}
-
-	span:first-of-type {
-		transform: rotate(45deg);
-	}
-
-	span:last-of-type {
-		transform: rotate(-45deg);
-	}
+	align-items: center;
+	flex-direction: column;
+	gap: 1.6rem;
+	padding: 1rem;
 `;
 
-export const MobileNavWrapper = styled.nav``;
+export const MobileLinkItem = styled.li<linkProps>`
+	overflow: hidden;
+	& a {
+		font-size: 4rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		-webkit-text-stroke: 1px #fff;
+		color: transparent;
+		position: relative;
+		height: fit-content;
+		width: fit-content;
+
+		&::before {
+			content: '${(props) => props.name}';
+			position: absolute;
+			/* ----first animation---- */
+
+			width: 0%;
+			color: #fff;
+			overflow: hidden;
+
+			/* ----second animation---- */
+
+			/* background-color: #fff;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transform: translateY(100%);*/
+
+			transition: all 450ms;
+		}
+		&:hover::before {
+			/* transform: translateY(0%); */
+			width: 100%;
+		}
+	}
+`;

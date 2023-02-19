@@ -2,17 +2,7 @@ import Link from 'next/link';
 import { HeaderLeft, HeaderRight, HeaderWrapper, LinkItem, LinkList, LogoContainer } from './Header-css';
 import logo from '../../assets/logo.svg';
 import Image from 'next/image';
-
-interface link {
-	name: string;
-	path: string;
-}
-
-const navLinks: link[] = [
-	{ name: 'About', path: '#' },
-	{ name: 'Projects', path: '#' },
-	{ name: 'Contact', path: '#' },
-];
+import { navLinks } from '@/lib/staticObjects';
 
 const Header = () => {
 	return (
