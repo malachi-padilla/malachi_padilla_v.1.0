@@ -1,4 +1,6 @@
+import CursorBlob from '@/components/cursorBlob/CursorBlob';
 import Hero from '@/components/homepage/Hero';
+import { PageWrapper } from '@/theme/layout/containers';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,9 +12,10 @@ export default function Home() {
 				<title>Malachi Padilla | Full-Stack Software Engineer</title>
 				<meta name='description' content='Full-Stack Software Engineer for hire'></meta>
 			</Head>
-			<main>
+			<PageWrapper>
 				<Hero />
-			</main>
+				<CursorBlob />
+			</PageWrapper>
 		</>
 	);
 }

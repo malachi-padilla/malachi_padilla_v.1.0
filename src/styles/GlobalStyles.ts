@@ -30,7 +30,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: ${rubik.style.fontFamily};
 	background-color: #0b090a;
+	overflow-x: hidden;
+	&::-webkit-scrollbar{
+		display: none;
+	}
 }
+
+
 
 img,
 picture,
@@ -46,6 +52,12 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+button{
+	border:none;
+	background:none;
+	outline: none;
 }
 
 p,

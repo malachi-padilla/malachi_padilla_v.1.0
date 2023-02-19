@@ -6,8 +6,8 @@ const CursorBlob = () => {
 	const { clientX, clientY } = useMousePosition();
 
 	return (
-		<BlurWrap top={clientY} left={clientX}>
-			<Blob></Blob>
+		<BlurWrap>
+			<Blob top={clientY} left={clientX}></Blob>
 		</BlurWrap>
 	);
 };

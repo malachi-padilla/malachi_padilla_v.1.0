@@ -13,13 +13,15 @@ transform:rotate(360deg);
 }
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.nav`
 	display: flex;
 	width: 100%;
 	height: 10vh;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 0 4rem;
+	position: sticky;
+	top: 0;
 `;
 
 export const HeaderLeft = styled.div`

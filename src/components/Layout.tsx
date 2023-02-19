@@ -1,6 +1,5 @@
 import { screenWidthBoolean } from '@/util/utilFunctions';
 import React, { useEffect, useState } from 'react';
-import CursorBlob from './cursorBlob/CursorBlob';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import MobileHeader from './header/mobile/MobileHeader';
@@ -22,7 +21,6 @@ const Layout = ({ children }: any) => {
 					<Header />
 					<main>{children}</main>
 					<Footer />
-					<CursorBlob />
 				</>
 			) : (
 				<>

@@ -17,24 +17,26 @@ const blobBehavior = keyframes`
 }
 `;
 
-export const BlurWrap = styled.div<BlobProps>`
-	height: 50rem;
-	width: 50rem;
-	z-index: -1;
-	filter: blur(50rem);
-	position: absolute;
-	left: ${(props) => props.left}px;
-	top: ${(props) => props.top}px;
-`;
-
-export const Blob = styled.div`
+export const BlurWrap = styled.div`
 	height: 100%;
 	width: 100%;
+	filter: blur(15rem);
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+`;
+
+export const Blob = styled.div<BlobProps>`
+	height: 50rem;
+	width: 50rem;
 	background-color: #fff;
 	border-radius: 50%;
 	background: #12c2e9;
-	z-index: 1;
 	background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
 	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
 	animation: ${blobBehavior} 5s linear infinite;
+	position: absolute;
+	left: ${(props) => props.left}px;
+	top: ${(props) => props.top}px;
 `;

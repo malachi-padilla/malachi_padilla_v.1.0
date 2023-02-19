@@ -16,11 +16,11 @@ const useMousePosition = () => {
 	};
 
 	useEffect(() => {
-		document.addEventListener('mousemove', updatePosition, false);
+		document.addEventListener('pointermove', updatePosition, false);
 		document.addEventListener('mouseenter', updatePosition, false);
 
 		return () => {
-			document.removeEventListener('mousemove', updatePosition);
+			document.removeEventListener('pointermove', updatePosition);
 			document.removeEventListener('mouseenter', updatePosition);
 		};
 	}, []);
