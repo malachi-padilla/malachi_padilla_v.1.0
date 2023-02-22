@@ -10,8 +10,9 @@ const blobBehavior = keyframes`
     transform:rotate(0deg);
 }
 50%{
-    width:60rem;
+     transform:scaleX(1.3) scaleY(1.1);
 }
+
 100%{
     transform:rotate(360deg);
 }
@@ -20,7 +21,7 @@ const blobBehavior = keyframes`
 export const BlurWrap = styled.div`
 	height: 100%;
 	width: 100%;
-	filter: blur(15rem);
+	filter: blur(20rem);
 	z-index: -1;
 	position: absolute;
 	top: 0;
@@ -28,13 +29,13 @@ export const BlurWrap = styled.div`
 `;
 
 export const Blob = styled.div<BlobProps>`
-	height: 50rem;
-	width: 50rem;
+	height: 20rem;
+	width: 20rem;
 	background-color: #fff;
 	border-radius: 50%;
 	background: #12c2e9;
-	background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+	background: -webkit-linear-gradient(to right, #ffd074, #a374ff);
+	background: linear-gradient(to right, #ffd074, #a374ff);
 	animation: ${blobBehavior} 5s linear infinite;
 	position: absolute;
 	left: ${(props) => props.left}px;

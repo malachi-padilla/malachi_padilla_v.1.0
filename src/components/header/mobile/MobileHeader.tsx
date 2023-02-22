@@ -27,7 +27,9 @@ const MobileHeader = () => {
 					<MobileLinkList>
 						{navLinks.map((link, index) => (
 							<MobileLinkItem key={index} name={link.name}>
-								<Link href={link.path}>{link.name}</Link>
+								<Link href={link.path} onClick={() => setBurgerMenuOpen(false)} scroll={false}>
+									{link.name}
+								</Link>
 							</MobileLinkItem>
 						))}
 					</MobileLinkList>

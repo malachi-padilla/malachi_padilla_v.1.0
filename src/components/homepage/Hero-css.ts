@@ -18,9 +18,6 @@ export const HeroWrap = styled.section`
 	background: transparent;
 	overflow: hidden;
 	padding: 0 1rem;
-	@media (max-width: 768px) {
-		height: 100vh;
-	}
 `;
 
 export const HeroText = styled.div`
@@ -56,8 +53,8 @@ export const HeroText = styled.div`
 		font-weight: 900;
 		line-height: 8rem;
 		@media (max-width: 768px) {
-			line-height: 7rem;
-			font-size: 7rem;
+			line-height: 5rem;
+			font-size: 5rem;
 		}
 	}
 	h2 {
@@ -67,10 +64,10 @@ export const HeroText = styled.div`
 		text-transform: uppercase;
 		line-height: 4rem;
 		font-weight: 900;
-		color: #c471ed;
+		color: #ffd074;
 		letter-spacing: -1px;
-		background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-		background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+		background: -webkit-linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
+		background: linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		@media (max-width: 768px) {
@@ -79,7 +76,7 @@ export const HeroText = styled.div`
 		}
 	}
 	p {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		color: #fff;
 	}
 `;
@@ -87,8 +84,9 @@ export const HeroText = styled.div`
 export const HeroButton = styled.a`
 	color: #fff;
 	font-size: 2.4rem;
-	padding: 0.8rem 2.4rem;
+	padding: 1.2rem 2.4rem;
 	border: 1px solid #fff;
+	border-radius: 3rem;
 	text-transform: uppercase;
 	font-weight: 900;
 	position: relative;
@@ -101,8 +99,8 @@ export const HeroButton = styled.a`
 		top: 0;
 		left: 0;
 		background: #12c2e9;
-		background: -webkit-linear-gradient(to right, #f64f59, #c471ed);
-		background: linear-gradient(to right, #f64f59, #c471ed);
+		background: -webkit-linear-gradient(to right, #ffd074, #a374ff);
+		background: linear-gradient(to right, #ffd074, #a374ff);
 		transform: translateX(-100%);
 		transition: all 400ms;
 		z-index: -1;

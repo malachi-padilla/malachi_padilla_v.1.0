@@ -7,16 +7,13 @@ const Hero = () => {
 			<HeroText>
 				<span>Hello 👋, my name is</span>
 				<h1>Malachi Padilla</h1>
-				<h2>Adaptable, forward-thinking, and always up for a new challenge.</h2>
+				<h2>Innovate. Create. Inspire. Repeat.</h2>
 				{/* <h2>motivated, always learning</h2> */}
 				<p>
-					Looking for a highly skilled web developer who can bring your ideas to life? Look no further! With expertise
-					in modern web technologies and a passion for creating exceptional user experiences, I specialize in building
-					high-quality software applications that are tailored to meet the unique needs of my clients. Whether you need
-					a complete end-to-end solution or just some expert guidance, I'm committed to delivering exceptional code and
-					results that will take your project to the next level. Let's work together to create something amazing!
+					With a focus on delivering streamlined, user-friendly interfaces that drive engagement and conversion, I'm
+					passionate about being a key contributor to a project's success from the ground up.
 				</p>
-				<HeroButton href='#'>Work With Me!</HeroButton>
+				<HeroButton href='#contact'>Work With Me!</HeroButton>
 			</HeroText>
 		</HeroWrap>
 	);

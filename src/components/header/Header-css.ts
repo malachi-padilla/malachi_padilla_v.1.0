@@ -22,6 +22,7 @@ export const HeaderWrapper = styled.nav`
 	padding: 0 4rem;
 	position: sticky;
 	top: 0;
+	z-index: 10;
 `;
 
 export const HeaderLeft = styled.div`
@@ -70,7 +71,7 @@ export const LinkList = styled.ul`
 export const LinkItem = styled.li<linkProps>`
 	overflow: hidden;
 	& a {
-		font-size: 1.6rem;
+		font-size: 2.4rem;
 		font-weight: 900;
 		text-transform: uppercase;
 		-webkit-text-stroke: 1px #fff;
@@ -82,6 +83,8 @@ export const LinkItem = styled.li<linkProps>`
 		&::before {
 			content: '${(props) => props.name}';
 			position: absolute;
+			transition: all 450ms;
+
 			/* ----first animation---- */
 
 			width: 0%;
@@ -93,9 +96,7 @@ export const LinkItem = styled.li<linkProps>`
 			/* background-color: #fff;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-			transform: translateY(100%);*/
-
-			transition: all 450ms;
+			transform: translateY(100%); */
 		}
 		&:hover::before {
 			/* transform: translateY(0%); */

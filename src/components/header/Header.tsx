@@ -3,12 +3,16 @@ import { HeaderLeft, HeaderRight, HeaderWrapper, LinkItem, LinkList, LogoContain
 import logo from '../../assets/logo.svg';
 import Image from 'next/image';
 import { navLinks } from '@/lib/staticObjects';
+import React, { useEffect } from 'react';
+import { scrollToTop } from '@/util/utilFunctions';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+	const router = useRouter();
 	return (
 		<HeaderWrapper>
 			<HeaderLeft>
-				<LogoContainer as={Link as any} href='/'>
+				<LogoContainer onClick={scrollToTop}>
 					<Image src={logo} alt='malachi padilla' />
 				</LogoContainer>
 			</HeaderLeft>
@@ -16,7 +20,9 @@ const Header = () => {
 				<LinkList>
 					{navLinks.map((link, index) => (
 						<LinkItem key={index} name={link.name}>
-							<Link href={link.path}>{link.name}</Link>
+							<Link href={link.path} scroll={false} className={router.pathname === link.path ? 'current' : ''}>
+								{link.name}
+							</Link>
 						</LinkItem>
 					))}
 				</LinkList>

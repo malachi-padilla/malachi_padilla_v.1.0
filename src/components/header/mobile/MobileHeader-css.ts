@@ -54,8 +54,8 @@ export const BurgerMenu = styled.button<BurgerProps>`
 
 export const MobileNavWrapper = styled.nav<BurgerProps>`
 	height: 100vh;
-	width: ${(props) => (props.open ? '70%' : '0')};
-	background-color: #0b090a;
+	width: ${(props) => (props.open ? '100%' : '0')};
+	background-color: #1d1d1f;
 	position: absolute;
 	top: 0;
 	right: 0;

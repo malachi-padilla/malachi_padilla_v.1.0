@@ -18,7 +18,6 @@ const useMousePosition = () => {
 	useEffect(() => {
 		document.addEventListener('pointermove', updatePosition, false);
 		document.addEventListener('mouseenter', updatePosition, false);
-
 		return () => {
 			document.removeEventListener('pointermove', updatePosition);
 			document.removeEventListener('mouseenter', updatePosition);

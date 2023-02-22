@@ -1,4 +1,5 @@
 import CursorBlob from '@/components/cursorBlob/CursorBlob';
+import ContactForm from '@/components/homepage/ContactForm';
 import Hero from '@/components/homepage/Hero';
 import { PageWrapper } from '@/theme/layout/containers';
 import Head from 'next/head';
@@ -14,6 +15,9 @@ export default function Home() {
 			</Head>
 			<PageWrapper>
 				<Hero />
+				<section id='about'></section>
+				<section id='projects'></section>
+				<ContactForm />
 				<CursorBlob />
 			</PageWrapper>
 		</>
