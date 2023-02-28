@@ -28,6 +28,7 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	justify-content: center;
 	align-items: flex-end;
 	z-index: 3;
+	cursor: pointer;
 	span {
 		height: 0.2rem;
 		border-radius: 0.2rem;

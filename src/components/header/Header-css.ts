@@ -20,9 +20,6 @@ export const HeaderWrapper = styled.nav`
 	justify-content: flex-start;
 	align-items: center;
 	padding: 0 4rem;
-	position: sticky;
-	top: 0;
-	z-index: 10;
 `;
 
 export const HeaderLeft = styled.div`
@@ -71,7 +68,7 @@ export const LinkList = styled.ul`
 export const LinkItem = styled.li<linkProps>`
 	overflow: hidden;
 	& a {
-		font-size: 2.4rem;
+		font-size: 1.8rem;
 		font-weight: 900;
 		text-transform: uppercase;
 		-webkit-text-stroke: 1px #fff;
@@ -100,6 +97,9 @@ export const LinkItem = styled.li<linkProps>`
 		}
 		&:hover::before {
 			/* transform: translateY(0%); */
+			width: 100%;
+		}
+		&.current::before {
 			width: 100%;
 		}
 	}

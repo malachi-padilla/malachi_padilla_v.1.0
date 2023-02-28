@@ -3,24 +3,22 @@ import { HeaderLeft, HeaderRight, HeaderWrapper, LinkItem, LinkList, LogoContain
 import logo from '../../assets/logo.svg';
 import Image from 'next/image';
 import { navLinks } from '@/lib/staticObjects';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { scrollToTop } from '@/util/utilFunctions';
-import { useRouter } from 'next/router';
 
 const Header = () => {
-	const router = useRouter();
 	return (
 		<HeaderWrapper>
 			<HeaderLeft>
 				<LogoContainer onClick={scrollToTop}>
-					<Image src={logo} alt='malachi padilla' />
+					<Image src={logo} alt='malachi padilla' priority />
 				</LogoContainer>
 			</HeaderLeft>
 			<HeaderRight>
 				<LinkList>
 					{navLinks.map((link, index) => (
 						<LinkItem key={index} name={link.name}>
-							<Link href={link.path} scroll={false} className={router.pathname === link.path ? 'current' : ''}>
+							<Link href={link.path} scroll={false}>
 								{link.name}
 							</Link>
 						</LinkItem>

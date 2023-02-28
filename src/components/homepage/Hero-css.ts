@@ -83,7 +83,7 @@ export const HeroText = styled.div`
 
 export const HeroButton = styled.a`
 	color: #fff;
-	font-size: 2.4rem;
+	font-size: 1.8rem;
 	padding: 1.2rem 2.4rem;
 	border: 1px solid #fff;
 	border-radius: 3rem;

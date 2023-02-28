@@ -7,11 +7,10 @@ const Hero = () => {
 			<HeroText>
 				<span>Hello 👋, my name is</span>
 				<h1>Malachi Padilla</h1>
-				<h2>Innovate. Create. Inspire. Repeat.</h2>
-				{/* <h2>motivated, always learning</h2> */}
+				<h2>Frontend Developer & Designer</h2>
 				<p>
-					With a focus on delivering streamlined, user-friendly interfaces that drive engagement and conversion, I'm
-					passionate about being a key contributor to a project's success from the ground up.
+					I'm passionate about desiging, developing, and launching beautiful user experiences. If you need help building
+					your next idea, or need an innovative frontend devloper on your team, please feel free to reach out!
 				</p>
 				<HeroButton href='#contact'>Work With Me!</HeroButton>
 			</HeroText>

@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface LabelProps {
 	visible: boolean;
 }
 
 export const ContactSection = styled.section`
-	height: 90vh;
+	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: transparent;
 	overflow: hidden;
-	padding: 1rem;
+	padding: 5rem 1rem;
 `;
 
 export const ContentWrapper = styled.div`
@@ -21,7 +21,7 @@ export const ContentWrapper = styled.div`
 	align-items: center;
 	flex-direction: column;
 	height: 100%;
-	gap: 1.6rem;
+	gap: 2.5rem;
 	width: 50%;
 	@media (max-width: 1500px) {
 		width: 60%;
@@ -41,6 +41,12 @@ export const ContentWrapper = styled.div`
 		font-weight: 900;
 		letter-spacing: -1px;
 		text-align: center;
+		span {
+			background: -webkit-linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
+			background: linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 	p {
 		font-size: 1.8rem;
@@ -62,14 +68,6 @@ export const FormWrap = styled.form`
 	gap: 2rem;
 	background-color: #19191a;
 	border: 1px solid #3a3a3b;
-	div {
-		width: 90%;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		flex-direction: column;
-	}
-
 	textarea {
 		width: 90%;
 		background-color: transparent;
@@ -90,6 +88,14 @@ export const FormWrap = styled.form`
 			border: 1px solid #a374ff;
 		}
 	}
+`;
+
+export const FromGroup = styled.div`
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
 `;
 
 export const CustomLabel = styled.label<LabelProps>`
@@ -146,3 +152,5 @@ export const SubmitButton = styled.input`
 	color: #19191a;
 	cursor: pointer;
 `;
+
+export const Loader = styled.div``;
