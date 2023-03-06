@@ -11,11 +11,10 @@ const fadeIn = keyframes`
 
 export const HeroWrap = styled.section`
 	height: calc(100vh - 10vh);
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: transparent;
 	overflow: hidden;
 	padding: 0 1rem;
 `;
@@ -37,47 +36,6 @@ export const HeroText = styled.div`
 	}
 	@media (max-width: 768px) {
 		width: 90%;
-	}
-	span {
-		font-size: 1.6rem;
-		font-weight: 900;
-		text-transform: uppercase;
-		-webkit-text-stroke: 1px #fff;
-		color: transparent;
-	}
-	h1 {
-		font-size: 8rem;
-		color: #fff;
-		margin: 0;
-		text-transform: uppercase;
-		font-weight: 900;
-		line-height: 8rem;
-		@media (max-width: 768px) {
-			line-height: 5rem;
-			font-size: 5rem;
-		}
-	}
-	h2 {
-		font-size: 4rem;
-		color: #fff;
-		margin: 0;
-		text-transform: uppercase;
-		line-height: 4rem;
-		font-weight: 900;
-		color: #ffd074;
-		letter-spacing: -1px;
-		background: -webkit-linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
-		background: linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		@media (max-width: 768px) {
-			line-height: 3.5rem;
-			font-size: 3.5rem;
-		}
-	}
-	p {
-		font-size: 1.8rem;
-		color: #fff;
 	}
 `;
 

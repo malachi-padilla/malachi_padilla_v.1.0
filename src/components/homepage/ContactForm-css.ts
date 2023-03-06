@@ -1,8 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-
-interface LabelProps {
-	visible: boolean;
-}
+import styled from 'styled-components';
+import wavyBg from '../../assets/wavy-bg.svg';
 
 export const ContactSection = styled.section`
 	height: 100%;
@@ -10,9 +7,12 @@ export const ContactSection = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: transparent;
 	overflow: hidden;
 	padding: 5rem 1rem;
+	background-image: url(${wavyBg.src});
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
 `;
 
 export const ContentWrapper = styled.div`
@@ -30,28 +30,11 @@ export const ContentWrapper = styled.div`
 		width: 80%;
 	}
 	@media (max-width: 768px) {
-		width: 95%;
-	}
-	h2 {
-		font-size: 5rem;
-		line-height: 5rem;
-		color: #fff;
-		margin: 0;
-		text-transform: uppercase;
-		font-weight: 900;
-		letter-spacing: -1px;
-		text-align: center;
-		span {
-			background: -webkit-linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
-			background: linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
+		width: 90%;
 	}
 	p {
 		font-size: 1.8rem;
 		color: #fff;
-		text-align: center;
 	}
 `;
 
@@ -61,7 +44,7 @@ export const FormWrap = styled.form`
 	padding: 4rem;
 	border-radius: 1rem;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: column;
 	margin-top: 2rem;
@@ -98,23 +81,29 @@ export const FromGroup = styled.div`
 	flex-direction: column;
 `;
 
-export const CustomLabel = styled.label<LabelProps>`
+export const ButtonRow = styled.div`
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+`;
+
+export const CustomLabel = styled.label`
 	color: #ffd074;
 	text-transform: uppercase;
 	font-size: 0.8;
 	letter-spacing: 3px;
 	margin-bottom: 1rem;
-	opacity: ${(props) => (props.visible ? '1' : '0')};
 	transition: all 550ms;
 `;
 
-export const CustomInput = styled.input<LabelProps>`
+export const CustomInput = styled.input`
 	width: 100%;
 	background-color: transparent;
 	padding: 1.6rem 0;
 	font-size: 1.6rem;
 	color: #fff;
-	/* border-bottom: 1px solid #a374ff; */
 	transition: all 250ms;
 	background: linear-gradient(#19191a, #19191a) padding-box, linear-gradient(to right, #a374ff, #00d9b8) border-box;
 	border-bottom: 1px solid transparent;
@@ -126,12 +115,13 @@ export const CustomInput = styled.input<LabelProps>`
 	&::placeholder {
 		color: #fff;
 		font-weight: 300;
-		opacity: ${(props) => (props.visible ? '0' : '1')};
+		transition: all 250ms;
 	}
 
 	&:focus,
 	&:active,
-	&:autofill {
+	&:autofill,
+	&:hover {
 		border-bottom: 1px solid #ffd074;
 	}
 	@media (max-width: 768px) {
@@ -141,16 +131,30 @@ export const CustomInput = styled.input<LabelProps>`
 `;
 
 export const SubmitButton = styled.input`
-	background-color: #ffd074;
-	color: #fff;
+	position: relative;
+	background: linear-gradient(#1d1d1f, #1d1d1f) padding-box, linear-gradient(to right, #a374ff, #00d9b8) border-box;
+	border: 1px solid transparent;
 	font-size: 1.6rem;
 	padding: 1.2rem 2.4rem;
 	border-radius: 3rem;
-	font-weight: 500;
-	position: relative;
+	text-transform: capitalize;
 	overflow: hidden;
-	color: #19191a;
+	color: #fff;
 	cursor: pointer;
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: red;
+		transform: translateX(-100%);
+		transition: all 400ms;
+	}
+	&:hover::before {
+		transform: translateX(0%);
+	}
 `;
 
 export const Loader = styled.div``;

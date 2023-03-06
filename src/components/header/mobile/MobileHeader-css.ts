@@ -15,7 +15,9 @@ export const MobileHeaderWrapper = styled.div`
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	backdrop-filter: blur(5rem);
+	@media (max-width: 768px) {
+		backdrop-filter: blur(5rem);
+	}
 `;
 
 export const BurgerMenu = styled.button<BurgerProps>`
@@ -33,7 +35,6 @@ export const BurgerMenu = styled.button<BurgerProps>`
 		height: 0.2rem;
 		border-radius: 0.2rem;
 		background-color: #fff;
-
 		position: ${(props) => (props.open ? 'absolute' : 'unset')};
 	}
 	span:first-of-type {
@@ -56,7 +57,7 @@ export const BurgerMenu = styled.button<BurgerProps>`
 export const MobileNavWrapper = styled.nav<BurgerProps>`
 	height: 100vh;
 	width: ${(props) => (props.open ? '100%' : '0')};
-	background-color: #1d1d1f;
+	background-color: #a374ff;
 	position: absolute;
 	top: 0;
 	right: 0;

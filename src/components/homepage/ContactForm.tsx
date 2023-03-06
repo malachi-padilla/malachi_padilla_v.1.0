@@ -1,6 +1,11 @@
 import { MailData } from '@/pages/api/types/apiTypes';
+import { FancyTitle } from '@/theme/layout/typography';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React, { useState } from 'react';
 import {
+	ButtonRow,
 	ContactSection,
 	ContentWrapper,
 	CustomInput,
@@ -12,8 +17,6 @@ import {
 } from './ContactForm-css';
 
 const ContactForm = () => {
-	const [nameFocused, setNameFocused] = useState<boolean>(false);
-	const [emailFocused, setEmailFocused] = useState<boolean>(false);
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
@@ -61,39 +64,29 @@ const ContactForm = () => {
 	return (
 		<ContactSection id='contact'>
 			<ContentWrapper>
-				<h2>
-					Let's Build Something <span>Awesome</span>
-				</h2>
-				<p>
-					If you need a savvy frontend developer on your team, or need help getting your idea on the web, just reach out
-					below. I'm excited to hear about your project and bring it to life!
-				</p>
+				<FancyTitle>
+					Hey 👋 , Let's Build Something <span>Awesome</span> Together.
+				</FancyTitle>
 				<FormWrap onSubmit={(e: any) => handleSubmit(e)}>
 					<FromGroup>
-						<CustomLabel htmlFor='user_name' visible={nameFocused}>
-							Your Name
-						</CustomLabel>
+						<CustomLabel htmlFor='user_name'>Your Name</CustomLabel>
 						<CustomInput
-							visible={nameFocused}
 							type='text'
 							id='user_name'
 							placeholder='Your name'
 							value={name}
-							onFocus={() => setNameFocused(true)}
+							required
 							onChange={(e) => setName(e.target.value)}
 						/>
 					</FromGroup>
 					<FromGroup>
-						<CustomLabel htmlFor='user_email' visible={emailFocused}>
-							Your Email
-						</CustomLabel>
+						<CustomLabel htmlFor='user_email'>Your Email</CustomLabel>
 						<CustomInput
-							visible={emailFocused}
 							value={email}
 							type='email'
 							id='user_email'
 							placeholder='Your Email'
-							onFocus={() => setEmailFocused(true)}
+							required
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</FromGroup>
@@ -105,9 +98,11 @@ const ContactForm = () => {
 						placeholder='Your message'
 						value={message}
 						onChange={(e) => setMessage(e.target.value)}></textarea>
-					<SubmitButton type='submit' />
+					<ButtonRow>
+						<SubmitButton type='submit' value='Send it 🚀' />
+					</ButtonRow>
+					{sendLoader ? <Loader>Loading...</Loader> : <></>}
 				</FormWrap>
-				{sendLoader ? <Loader>Loading...</Loader> : <></>}
 			</ContentWrapper>
 		</ContactSection>
 	);

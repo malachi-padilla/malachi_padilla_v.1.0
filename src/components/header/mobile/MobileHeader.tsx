@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { HeaderLeft, HeaderRight, LinkItem, LinkList, LogoContainer } from '../Header-css';
+import { HeaderLeft, HeaderRight, LogoContainer } from '../Header-css';
 import { BurgerMenu, MobileHeaderWrapper, MobileNavWrapper, MobileLinkList, MobileLinkItem } from './MobileHeader-css';
 import logo from '../../../assets/logo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navLinks } from '@/lib/staticObjects';
+import { scrollToTop } from '@/util/utilFunctions';
 
 const MobileHeader = () => {
 	const [burgerMenuOpen, setBurgerMenuOpen] = useState<boolean>(false);
@@ -12,7 +13,7 @@ const MobileHeader = () => {
 		<>
 			<MobileHeaderWrapper>
 				<HeaderLeft>
-					<LogoContainer as={Link as any} href='/'>
+					<LogoContainer onClick={scrollToTop}>
 						<Image src={logo} alt='malachi padilla' />
 					</LogoContainer>
 				</HeaderLeft>
