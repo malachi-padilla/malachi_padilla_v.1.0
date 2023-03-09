@@ -6,9 +6,6 @@ import { ContentLeft, ContentRight, ContentWrapper, StackWrap, TechList } from '
 const TechStack = () => {
 	const [infoOpen, setInfoOpen] = useState<number | null>(null);
 
-	useEffect(() => {
-		console.log(infoOpen);
-	}, [infoOpen]);
 	return (
 		<ContentWrapper>
 			<ContentLeft>

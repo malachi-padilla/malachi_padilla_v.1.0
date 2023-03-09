@@ -52,9 +52,6 @@ export const ContentLeft = styled.div`
 	@media (max-width: 768px) {
 		width: 90%;
 	}
-	* {
-		transition: all 250ms;
-	}
 `;
 
 export const TechList = styled.ul<TechProps>`
@@ -64,6 +61,9 @@ export const TechList = styled.ul<TechProps>`
 	gap: 1.6rem;
 	justify-content: flex-start;
 	align-items: flex-start;
+	ul {
+		transition: opacity 250ms;
+	}
 
 	& > li {
 		font-size: 1.6rem;
@@ -79,6 +79,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 		ul {
 			opacity: ${(props) => (props.info === 1 ? '1' : '0')};
+			display: ${(props) => (props.info === 1 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(2) {
@@ -89,6 +90,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 		ul {
 			opacity: ${(props) => (props.info === 2 ? '1' : '0')};
+			display: ${(props) => (props.info === 2 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(3) {
@@ -99,6 +101,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 		ul {
 			opacity: ${(props) => (props.info === 3 ? '1' : '0')};
+			display: ${(props) => (props.info === 3 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(4) {
@@ -109,6 +112,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 		ul {
 			opacity: ${(props) => (props.info === 4 ? '1' : '0')};
+			display: ${(props) => (props.info === 4 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(5) {
@@ -119,6 +123,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 		ul {
 			opacity: ${(props) => (props.info === 5 ? '1' : '0')};
+			display: ${(props) => (props.info === 5 ? '' : 'none')};
 		}
 	}
 `;
