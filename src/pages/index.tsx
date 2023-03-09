@@ -1,9 +1,11 @@
 import CursorBlob from '@/components/cursorBlob/CursorBlob';
-import ContactForm from '@/components/homepage/ContactForm';
+import ContactForm from '@/components/homepage/contact/ContactForm';
 import Hero from '@/components/homepage/Hero';
-import StorySection from '@/components/homepage/StorySection';
-import { PageWrapper } from '@/theme/layout/containers';
+import StorySection from '@/components/homepage/about/StorySection';
+import { CommonSection, PageWrapper } from '@/theme/layout/containers';
 import Head from 'next/head';
+import Gallery from '@/components/homepage/about/Gallery';
+import TechStack from '@/components/homepage/techstack/TechStack';
 
 export default function Home() {
 	return (
@@ -11,12 +13,16 @@ export default function Home() {
 			<Head>
 				<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 				<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1' />
-				<title>Malachi Padilla | Full-Stack Software Engineer</title>
+				<title>Malachi Padilla | Frontend Software Engineer</title>
 				<meta name='description' content='Full-Stack Software Engineer for hire'></meta>
 			</Head>
 			<PageWrapper>
 				<Hero />
-				<StorySection />
+				<TechStack />
+				<CommonSection id='about'>
+					<StorySection />
+					<Gallery />
+				</CommonSection>
 				<ContactForm />
 				<CursorBlob />
 			</PageWrapper>

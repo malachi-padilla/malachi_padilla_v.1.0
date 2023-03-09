@@ -8,3 +8,9 @@ export interface ScrollToOptions {
 	top?: number;
 	behavior?: 'auto' | 'smooth';
 }
+
+export interface ITechList {
+	technologie: string;
+	stackPosition: number;
+	techInfo: string;
+}

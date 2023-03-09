@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.6rem;
 	align-items: center;
 	justify-content: center;
 	p {

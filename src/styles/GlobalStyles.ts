@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
 * {
 	margin: 0;
+	/* padding: 0; */
 }
 
 html,
@@ -91,6 +92,7 @@ h6 {
 
 ul{
 	list-style: none;
+	padding: 0;
 }
 
 a{

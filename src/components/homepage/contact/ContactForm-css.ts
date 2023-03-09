@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import wavyBg from '../../assets/wavy-bg.svg';
+import wavyBg from '@/assets/wavy-bg.svg';
 
 export const ContactSection = styled.section`
 	height: 100%;
@@ -141,19 +141,10 @@ export const SubmitButton = styled.input`
 	overflow: hidden;
 	color: #fff;
 	cursor: pointer;
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background: red;
-		transform: translateX(-100%);
-		transition: all 400ms;
-	}
-	&:hover::before {
-		transform: translateX(0%);
+	transition: all 250mst;
+	:hover {
+		background: #00d9b8;
+		filter: drop-shadow(0.1rem 0.1rem 0.75rem #00d9b8);
 	}
 `;
 

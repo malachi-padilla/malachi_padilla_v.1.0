@@ -1,5 +1,3 @@
-import { screenWidthBoolean } from '@/util/utilFunctions';
-import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -33,13 +31,12 @@ export const StorySectionWrap = styled.div`
 
 export const StoryText = styled.div`
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
 	height: 100%;
 	width: 50%;
 	gap: 1.6rem;
-	position: relative;
 	animation: ${fadeIn} 1.5s ease-in;
 	@media (max-width: 1500px) {
 		width: 60%;
