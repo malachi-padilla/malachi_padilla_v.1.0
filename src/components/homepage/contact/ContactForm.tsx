@@ -1,8 +1,6 @@
 import { MailData } from '@/pages/api/types/apiTypes';
 import { TextContainer } from '@/theme/layout/containers';
-import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FancyTitle, PreTitle } from '@/theme/layout/typography';
 
 import React, { useState } from 'react';
 import {

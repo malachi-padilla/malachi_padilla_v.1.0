@@ -4,7 +4,6 @@ import Hero from '@/components/homepage/Hero';
 import StorySection from '@/components/homepage/about/StorySection';
 import { CommonSection, PageWrapper } from '@/theme/layout/containers';
 import Head from 'next/head';
-import Gallery from '@/components/homepage/about/Gallery';
 import TechStack from '@/components/homepage/techstack/TechStack';
 import Projects from '@/components/homepage/projects/Projects';
 

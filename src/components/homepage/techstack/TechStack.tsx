@@ -1,6 +1,6 @@
 import { techStackList } from '@/lib/staticObjects';
-import { FancyTitle, FancyTitleSecondary, MainParagraph, PreTitle } from '@/theme/layout/typography';
-import React, { useEffect, useState } from 'react';
+import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
+import React, { useState } from 'react';
 import { ContentLeft, ContentRight, ContentWrapper, StackWrap, TechList } from './TechStack-css';
 
 const TechStack = () => {
