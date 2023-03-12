@@ -10,8 +10,9 @@ const Hero = () => {
 				<PageTitle>Malachi Padilla</PageTitle>
 				<PageSubTitle>Frontend Developer & Designer</PageSubTitle>
 				<MainParagraph>
-					I'm passionate about designing, developing, and launching beautiful user experiences. If you need help
-					building your next idea, or need an innovative frontend developer on your team, I'd love to here about it!
+					I&apos;m passionate about designing, developing, and launching beautiful user experiences. If you need help
+					building your next idea, or need an innovative frontend developer on your team, I&apos;d love to here about
+					it!
 				</MainParagraph>
 				<HeroButton href='#contact'>Work With Me!</HeroButton>
 			</HeroText>

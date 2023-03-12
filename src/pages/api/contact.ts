@@ -62,7 +62,7 @@ import { ExtendedNextApiRequest, MailData } from './types/apiTypes';
 // 	});
 // };
 
-export default async (req: ExtendedNextApiRequest<MailData>, res: NextApiResponse) => {
+const sendMail = async (req: ExtendedNextApiRequest<MailData>, res: NextApiResponse) => {
 	const { name, email, message } = req.body;
 	const url = 'https://hooks.zapier.com/hooks/catch/14584750/3ocnenp/';
 	const myHeaders = new Headers();
@@ -89,3 +89,5 @@ export default async (req: ExtendedNextApiRequest<MailData>, res: NextApiRespons
 			return res.status(500).json({ message: 'message failed :(' });
 		});
 };
+
+export default sendMail;

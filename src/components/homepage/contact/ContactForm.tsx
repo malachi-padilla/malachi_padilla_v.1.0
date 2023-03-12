@@ -68,7 +68,7 @@ const ContactForm = () => {
 				<TextContainer>
 					<PreTitle>Contact</PreTitle>
 					<FancyTitle>
-						Hey 👋 , Let's Build Something <span>Awesome</span> Together.
+						Hey 👋 , Let&apos;s Build Something <span>Awesome</span> Together.
 					</FancyTitle>
 				</TextContainer>
 				<FormWrap onSubmit={(e: any) => handleSubmit(e)}>

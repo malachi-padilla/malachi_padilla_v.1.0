@@ -1,6 +1,6 @@
 import { projectList } from '@/lib/staticObjects';
 import { TextContainer } from '@/theme/layout/containers';
-import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
+import { FancyTitle, PreTitle } from '@/theme/layout/typography';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
@@ -13,7 +13,6 @@ import {
 	ProjectPreview,
 } from './Projects-css';
 import { defineDesktopOrMobile } from '@/util/utilFunctions';
-import Link from 'next/link';
 
 const Projects = () => {
 	const [isDesktop, setIsDesktop] = useState<any | null>();
@@ -32,21 +31,21 @@ const Projects = () => {
 				<TextContainer>
 					<PreTitle> Featured Projects</PreTitle>
 					<FancyTitle>
-						Some Frontend <span>experiences</span> i've created
+						Some Frontend <span>experiences</span> i&apos;ve created
 					</FancyTitle>
 				</TextContainer>
 				{projectList.map((project, index) => (
-					<ProjectContainerMobile preview={project.preview.src}>
+					<ProjectContainerMobile preview={project.preview.src} key={index}>
 						<ProjectMetaMobile>
 							<h2>{project.name}</h2>
 							<p>{project.description}</p>
 							<ul>
-								{project.tech.map((item) => (
-									<li>{item}</li>
+								{project.tech.map((item, index) => (
+									<li key={index}>{item}</li>
 								))}
 							</ul>
 							{project.link ? (
-								<a href={project.link} target='_blank'>
+								<a href={project.link} target='_blank' rel='noreferrer'>
 									<FontAwesomeIcon icon={faGithub} />
 								</a>
 							) : (
@@ -63,22 +62,22 @@ const Projects = () => {
 				<TextContainer>
 					<PreTitle> Featured Projects</PreTitle>
 					<FancyTitle>
-						Some Frontend <span>experiences</span> i've created
+						Some Frontend <span>experiences</span> i&apos;ve created
 					</FancyTitle>
 				</TextContainer>
 				{projectList.map((project, index) => (
-					<ProjectContainer order={index}>
+					<ProjectContainer order={index} key={index}>
 						<ProjectPreview order={index} preview={project.preview.src}>
 							<ProjectMeta order={index}>
 								<h2>{project.name}</h2>
 								<p>{project.description}</p>
 								<ul>
-									{project.tech.map((item) => (
-										<li>{item}</li>
+									{project.tech.map((item, index) => (
+										<li key={index}>{item}</li>
 									))}
 								</ul>
 								{project.link ? (
-									<a href={project.link} target='_blank'>
+									<a href={project.link} target='_blank' rel='noreferrer'>
 										<FontAwesomeIcon icon={faGithub} />
 									</a>
 								) : (
