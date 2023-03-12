@@ -2,7 +2,7 @@ import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
 import Image from 'next/image';
 import React from 'react';
 import { HeroButton } from '../Hero-css';
-import ProfilePhoto from '@/assets/profile-photo.png';
+import ProfilePhoto from '../../../assets/profile-photo.png';
 import { StoryImage, StoryText, StorySectionWrap } from './StorySection-css';
 
 const StorySection = () => {
