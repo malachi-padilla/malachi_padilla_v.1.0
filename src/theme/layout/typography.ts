@@ -16,6 +16,11 @@ export const FancyTitle = styled.h2`
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+
+	@media (max-width: 768px) {
+		line-height: 3rem;
+		font-size: 3rem;
+	}
 `;
 
 export const FancyTitleSecondary = styled.h2`
