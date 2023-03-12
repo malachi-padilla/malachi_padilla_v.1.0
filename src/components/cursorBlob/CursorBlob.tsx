@@ -1,5 +1,5 @@
 import useMousePosition from '@/hooks/customHooks';
-import React, { useState } from 'react';
+import React from 'react';
 import { Blob, BlurWrap } from './CursorBlob-css';
 
 const CursorBlob = () => {
