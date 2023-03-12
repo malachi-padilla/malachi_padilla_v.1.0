@@ -7,10 +7,10 @@ const Footer = () => {
 	return (
 		<FooterContainer>
 			<SocialRow>
-				<SocialLink target='_blank' href='https://github.com/malachi-padilla?tab=repositories'>
+				<SocialLink target='_blank' href='https://github.com/malachi-padilla?tab=repositories' rel='noreferrer'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />
 				</SocialLink>
-				<SocialLink target='_blank' href='https://www.linkedin.com/in/malachi-padilla-5a2189223/'>
+				<SocialLink target='_blank' href='https://www.linkedin.com/in/malachi-padilla-5a2189223/' rel='noreferrer'>
 					<FontAwesomeIcon className='icon' icon={faLinkedinIn} />
 				</SocialLink>
 				<SocialLink href='mailto:malachicadenpadilla@gmail.com'>
