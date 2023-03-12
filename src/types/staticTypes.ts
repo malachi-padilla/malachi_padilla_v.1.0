@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface link {
 	name: string;
 	path: string;
@@ -13,4 +15,12 @@ export interface ITechList {
 	technologie: string;
 	stackPosition: number;
 	techInfo: string;
+}
+
+export interface IProjectList {
+	name: string;
+	description: string;
+	tech: string[];
+	preview: StaticImageData;
+	link?: string;
 }

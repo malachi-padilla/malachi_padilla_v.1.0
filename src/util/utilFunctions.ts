@@ -1,5 +1,5 @@
-export const screenWidthBoolean: () => boolean = () => {
-	if (window.innerWidth >= 1024) {
+export const defineDesktopOrMobile: () => boolean = () => {
+	if (window.innerWidth > 1024) {
 		return true;
 	} else {
 		return false;

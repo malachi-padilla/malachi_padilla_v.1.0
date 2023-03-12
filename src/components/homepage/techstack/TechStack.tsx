@@ -11,7 +11,7 @@ const TechStack = () => {
 			<ContentLeft>
 				<PreTitle></PreTitle>
 				<FancyTitle>
-					Recent <span>Tech</span> I've Been Working With
+					Tech I've Been <span>Working</span> With
 				</FancyTitle>
 				<MainParagraph>It all started with HTML, CSS, and JavaScript.</MainParagraph>
 				<TechList info={infoOpen}>

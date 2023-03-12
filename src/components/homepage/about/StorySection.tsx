@@ -14,19 +14,13 @@ const StorySection = () => {
 					A little <span>history</span> on how I got here
 				</FancyTitle>
 				<MainParagraph>
-					I never though this would be my career path. My passion for development came as a by product of unfortunate
-					events that took place in 2019. I was laid off due to COVID and I broke my ankle. Leaving me immobile in a
-					closet during a global pandemic. I began going to school for CS and fell in love. Thanks to
-					<a target='_blank' href='https://freecodecamp.org/'>
-						{' '}
-						FreeCodeCamp.org
-					</a>
-					, my best friend, and the many valuable resources on the internet, I learned how to code and developed an
-					addiction for frontend development.
+					It all began when covid struck, I lost my job, and I broke my ankle. Fortunately, my best friend works as a
+					software engineer. He taught me the fundamentals of programming, and I fell in love with it. Surprisingly,
+					being immobilized in your mother's closet is a tried and true method of enforcing productivity.
 				</MainParagraph>
 				<MainParagraph>
-					I can walk now, but I still spend most of my time sitting at my desk. In the last few years, I've had the
-					pleasure of working on many side-projects, websites for local businesses and a{' '}
+					In the last few years, I've had the pleasure of working on many side-projects, websites for local businesses
+					and a{' '}
 					<a href='https://cookd.io/' target='_blank'>
 						start-up{' '}
 					</a>
@@ -38,7 +32,8 @@ const StorySection = () => {
 					in the off-road space.
 				</MainParagraph>
 				<MainParagraph>
-					Right now, I'm looking for a job with a larger company that offers more opportunities for advancement.
+					As of now, i'm looking for work with a bigger company that can offer more growth and propel my learning even
+					further.
 				</MainParagraph>
 				<HeroButton href='#contact'>get in touch</HeroButton>
 			</StoryText>

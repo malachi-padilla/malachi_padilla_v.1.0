@@ -16,6 +16,19 @@ export const CommonSection = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
-	padding: 5rem 1rem;
+	/* overflow-x: hidden; */
+	padding: 0 1rem;
+	gap: 10rem;
+	margin-bottom: 10rem;
+`;
+
+export const TextContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	height: 100%;
+	flex-grow: 1;
+	width: 100%;
+	gap: 1.6rem;
 `;

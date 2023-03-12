@@ -6,6 +6,7 @@ import { CommonSection, PageWrapper } from '@/theme/layout/containers';
 import Head from 'next/head';
 import Gallery from '@/components/homepage/about/Gallery';
 import TechStack from '@/components/homepage/techstack/TechStack';
+import Projects from '@/components/homepage/projects/Projects';
 
 export default function Home() {
 	return (
@@ -18,10 +19,12 @@ export default function Home() {
 			</Head>
 			<PageWrapper>
 				<Hero />
-				<TechStack />
 				<CommonSection id='about'>
 					<StorySection />
-					<Gallery />
+					<TechStack />
+				</CommonSection>
+				<CommonSection id='projects'>
+					<Projects />
 				</CommonSection>
 				<ContactForm />
 				<CursorBlob />

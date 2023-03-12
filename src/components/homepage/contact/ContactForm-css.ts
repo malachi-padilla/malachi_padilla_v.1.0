@@ -8,7 +8,7 @@ export const ContactSection = styled.section`
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	padding: 5rem 1rem;
+	padding: 0 1rem;
 	background-image: url(${wavyBg.src});
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -31,10 +31,6 @@ export const ContentWrapper = styled.div`
 	}
 	@media (max-width: 768px) {
 		width: 90%;
-	}
-	p {
-		font-size: 1.8rem;
-		color: #fff;
 	}
 `;
 

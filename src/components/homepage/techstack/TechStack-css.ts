@@ -20,7 +20,6 @@ export const ContentWrapper = styled.div`
 	height: 100%;
 	gap: 2.5rem;
 	width: 50%;
-	padding: 2rem 0;
 	@media (max-width: 1500px) {
 		width: 60%;
 	}
@@ -72,55 +71,47 @@ export const TechList = styled.ul<TechProps>`
 		padding-left: 1.6rem;
 		border-left: 2px solid #fff;
 	}
-	li:nth-of-type(1) {
-		border-color: ${(props) => (props.info === 1 ? '#000' : '')};
+
+	li:hover {
 		:hover {
-			border-color: #000;
+			border-color: #a374ff;
 		}
+	}
+	li:nth-of-type(1) {
+		border-color: ${(props) => (props.info === 1 ? '#a374ff' : '')};
+
 		ul {
 			opacity: ${(props) => (props.info === 1 ? '1' : '0')};
 			display: ${(props) => (props.info === 1 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(2) {
-		border-color: ${(props) => (props.info === 2 ? '#61dbfb' : '')};
+		border-color: ${(props) => (props.info === 2 ? '#a374ff' : '')};
 
-		:hover {
-			border-color: #61dbfb;
-		}
 		ul {
 			opacity: ${(props) => (props.info === 2 ? '1' : '0')};
 			display: ${(props) => (props.info === 2 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(3) {
-		border-color: ${(props) => (props.info === 3 ? '#007acc' : '')};
+		border-color: ${(props) => (props.info === 3 ? '#a374ff' : '')};
 
-		:hover {
-			border-color: #007acc;
-		}
 		ul {
 			opacity: ${(props) => (props.info === 3 ? '1' : '0')};
 			display: ${(props) => (props.info === 3 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(4) {
-		border-color: ${(props) => (props.info === 4 ? '#f7df1e' : '')};
+		border-color: ${(props) => (props.info === 4 ? '#a374ff' : '')};
 
-		:hover {
-			border-color: #f7df1e;
-		}
 		ul {
 			opacity: ${(props) => (props.info === 4 ? '1' : '0')};
 			display: ${(props) => (props.info === 4 ? '' : 'none')};
 		}
 	}
 	li:nth-of-type(5) {
-		border-color: ${(props) => (props.info === 5 ? '#84ba64' : '')};
+		border-color: ${(props) => (props.info === 5 ? '#a374ff' : '')};
 
-		:hover {
-			border-color: #84ba64;
-		}
 		ul {
 			opacity: ${(props) => (props.info === 5 ? '1' : '0')};
 			display: ${(props) => (props.info === 5 ? '' : 'none')};
@@ -169,41 +160,41 @@ export const StackWrap = styled.div<TechProps>`
 		&:nth-of-type(1) {
 			top: 0;
 			z-index: 5;
-			background-color: ${(props) => (props.info === 1 ? '#000' : '')};
+			background-color: ${(props) => (props.info === 1 ? '#a374ff' : '')};
 			:hover {
-				background-color: #000;
+				background-color: #a374ff;
 			}
 		}
 		&:nth-of-type(2) {
 			top: 10%;
 			z-index: 4;
-			background-color: ${(props) => (props.info === 2 ? '#61dbfb' : '')};
+			background-color: ${(props) => (props.info === 2 ? '#a374ff' : '')};
 			:hover {
-				background-color: #61dbfb;
+				background-color: #a374ff;
 			}
 		}
 		&:nth-of-type(3) {
 			top: 20%;
 			z-index: 3;
-			background-color: ${(props) => (props.info === 3 ? '#007acc' : '')};
+			background-color: ${(props) => (props.info === 3 ? '#a374ff' : '')};
 			:hover {
-				background-color: #007acc;
+				background-color: #a374ff;
 			}
 		}
 		&:nth-of-type(4) {
 			top: 30%;
 			z-index: 2;
-			background-color: ${(props) => (props.info === 4 ? '#f7df1e' : '')};
+			background-color: ${(props) => (props.info === 4 ? '#a374ff' : '')};
 			:hover {
-				background-color: #f7df1e;
+				background-color: #a374ff;
 			}
 		}
 		&:nth-of-type(5) {
 			top: 40%;
 			z-index: 1;
-			background-color: ${(props) => (props.info === 5 ? '#84ba64' : '')};
+			background-color: ${(props) => (props.info === 5 ? '#a374ff' : '')};
 			:hover {
-				background-color: #84ba64;
+				background-color: #a374ff;
 			}
 		}
 	}

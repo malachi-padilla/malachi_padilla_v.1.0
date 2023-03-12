@@ -1,5 +1,6 @@
 import { MailData } from '@/pages/api/types/apiTypes';
-import { FancyTitle } from '@/theme/layout/typography';
+import { TextContainer } from '@/theme/layout/containers';
+import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -64,9 +65,12 @@ const ContactForm = () => {
 	return (
 		<ContactSection id='contact'>
 			<ContentWrapper>
-				<FancyTitle>
-					Hey 👋 , Let's Build Something <span>Awesome</span> Together.
-				</FancyTitle>
+				<TextContainer>
+					<PreTitle>Contact</PreTitle>
+					<FancyTitle>
+						Hey 👋 , Let's Build Something <span>Awesome</span> Together.
+					</FancyTitle>
+				</TextContainer>
 				<FormWrap onSubmit={(e: any) => handleSubmit(e)}>
 					<FromGroup>
 						<CustomLabel htmlFor='user_name'>Your Name</CustomLabel>
