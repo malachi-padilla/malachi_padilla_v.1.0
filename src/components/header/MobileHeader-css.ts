@@ -1,9 +1,47 @@
+import { spin } from '@/theme/animations/animation';
 import styled from 'styled-components';
-import { linkProps } from '../Header-css';
 
 interface BurgerProps {
 	open: boolean;
 }
+
+interface LinkProps {
+	name: string;
+}
+
+export const HeaderLeft = styled.div`
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+`;
+
+export const HeaderRight = styled.div`
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+`;
+
+export const LogoContainer = styled.div`
+	height: 100%;
+	width: fit-content;
+	justify-content: flex-start;
+	align-items: center;
+	img {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 1;
+		animation: ${spin} 1.5s alternate ease-out;
+		transition: transform 1.5s ease-out;
+		&:hover {
+			transform: rotate(360deg);
+			cursor: pointer;
+		}
+	}
+`;
 
 export const MobileHeaderWrapper = styled.div`
 	display: flex;
@@ -22,7 +60,7 @@ export const MobileHeaderWrapper = styled.div`
 
 export const BurgerMenu = styled.button<BurgerProps>`
 	height: 100%;
-	width: fit-content;
+	width: 15%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -31,6 +69,7 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	align-items: flex-end;
 	z-index: 3;
 	cursor: pointer;
+	position: relative;
 	span {
 		height: 0.2rem;
 		border-radius: 0.2rem;
@@ -77,7 +116,7 @@ export const MobileLinkList = styled.ul`
 	padding: 1rem;
 `;
 
-export const MobileLinkItem = styled.li<linkProps>`
+export const MobileLinkItem = styled.li<LinkProps>`
 	overflow: hidden;
 	& a {
 		font-size: 4rem;

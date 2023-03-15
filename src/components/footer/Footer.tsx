@@ -2,8 +2,15 @@ import { FooterContainer, SocialRow, SocialLink } from './Footer-css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { getYear } from '@/util/utilFunctions';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+	const [year, setYear] = useState<number>();
+
+	useEffect(() => {
+		setYear(getYear);
+	}, []);
 	return (
 		<FooterContainer>
 			<SocialRow>
@@ -17,7 +24,7 @@ const Footer = () => {
 					<FontAwesomeIcon className='icon' icon={faEnvelope} />
 				</SocialLink>
 			</SocialRow>
-			<p>Made with 100% natural ingredients by me © 2023</p>
+			<p>Made with 100% natural ingredients by me © {year}</p>
 		</FooterContainer>
 	);
 };

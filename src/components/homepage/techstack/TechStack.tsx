@@ -1,5 +1,5 @@
 import { techStackList } from '@/lib/staticObjects';
-import { FancyTitle, MainParagraph, PreTitle } from '@/theme/layout/typography';
+import { FancyTitle, MainParagraph, PreTitle } from '@/theme/typography/typography';
 import React, { useState } from 'react';
 import { ContentLeft, ContentRight, ContentWrapper, StackWrap, TechList } from './TechStack-css';
 
@@ -9,7 +9,7 @@ const TechStack = () => {
 	return (
 		<ContentWrapper>
 			<ContentLeft>
-				<PreTitle></PreTitle>
+				<PreTitle>Current Stack</PreTitle>
 				<FancyTitle>
 					Tech I&apos;ve Been <span>Working</span> With
 				</FancyTitle>

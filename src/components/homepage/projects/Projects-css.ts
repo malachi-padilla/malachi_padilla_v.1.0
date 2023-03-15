@@ -17,7 +17,7 @@ export const ContentContainer = styled.div`
 	flex-direction: column;
 	height: 100%;
 	gap: 2.5rem;
-	width: 100%;
+	width: 50%;
 	@media (max-width: 1500px) {
 		width: 60%;
 	}
@@ -102,7 +102,7 @@ export const ProjectMeta = styled.div<ProjectProps>`
 		li {
 			font-size: 1.4rem;
 			text-transform: capitalize;
-			color: #a9a9a9;
+			color: #a374ff;
 		}
 
 		li:not(:last-of-type)::after {

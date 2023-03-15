@@ -1,6 +1,6 @@
 import { MailData } from '@/pages/api/types/apiTypes';
 import { TextContainer } from '@/theme/layout/containers';
-import { FancyTitle, PreTitle } from '@/theme/layout/typography';
+import { FancyTitle, PreTitle } from '@/theme/typography/typography';
 
 import React, { useState } from 'react';
 import {
@@ -66,7 +66,7 @@ const ContactForm = () => {
 				<TextContainer>
 					<PreTitle>Contact</PreTitle>
 					<FancyTitle>
-						Hey 👋 , Let&apos;s Build Something <span>Awesome</span> Together.
+						Let&apos;s Build Something <span>Awesome</span> Together.
 					</FancyTitle>
 				</TextContainer>
 				<FormWrap onSubmit={(e: any) => handleSubmit(e)}>

@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import { HeaderLeft, HeaderRight, LogoContainer } from '../Header-css';
-import { BurgerMenu, MobileHeaderWrapper, MobileNavWrapper, MobileLinkList, MobileLinkItem } from './MobileHeader-css';
-import logo from '../../../assets/logo.svg';
+import {
+	BurgerMenu,
+	MobileHeaderWrapper,
+	MobileNavWrapper,
+	MobileLinkList,
+	MobileLinkItem,
+	HeaderLeft,
+	HeaderRight,
+	LogoContainer,
+} from './MobileHeader-css';
+import logo from '@/assets/logo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navLinks } from '@/lib/staticObjects';

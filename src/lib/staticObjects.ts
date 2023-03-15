@@ -12,13 +12,13 @@ export const techStackList: ITechList[] = [
 		technologie: 'Next.js',
 		stackPosition: 1,
 		techInfo:
-			'Next.js is a React meta-framework that provides Serve-Side Rendering (SSR), which improves page load times and SEO by rendering pages on the server and sending them as HTML to the client. Another thing I like about Next.js is that it simplifies the routing process by providing client-side routing out of the box!',
+			"I absolutely love using Next.js! As a React developer, it's a game-changer because it significantly speeds up website loading times and boosts SEO by rendering pages on the server and sending them as HTML to the client. But what really sets it apart for me is the built-in client-side routing feature, which makes it so much easier to navigate between pages without all the hassle of manual routing. With Next.js, I can focus on building an amazing website without worrying about slow loading times or complicated routing setups",
 	},
 	{
 		technologie: 'React',
 		stackPosition: 2,
 		techInfo:
-			'React is a Javascript library that revolves heavily around component-Based architecture, making reusable components easy to code, scale, and maintain. React is special because it uses what is called the virtual DOM, a lightweight copy of the real DOM, that allows it make updates while reducing the number of direct manipulations to the DOM. React is very popular and the community behind it is awesome!',
+			"React is my go-to library as a Javascript developer because of its component-based architecture, which makes coding, scaling, and maintaining reusable components a breeze. What really distinguishes React is its use of the virtual DOM, which is essentially a lightweight copy of the real DOM. This enables seamless updates while minimizing direct DOM manipulations, which can be a real pain in other frameworks. But what I adore about React is its amazing community! It's inspiring to be a part of a community of talented developers who are constantly pushing the boundaries of what's possible with this library.",
 	},
 	{
 		technologie: 'Typescript',
@@ -30,7 +30,7 @@ export const techStackList: ITechList[] = [
 		technologie: 'Javascript',
 		stackPosition: 4,
 		techInfo:
-			"Javascript is a high-level COMPILED programming language. JavaScript code is executed on the client side, meaning that it runs directly in the user's web browser, rather than on a server. This allows for a more responsive and interactive user experience. Its intent is to make the web a little more interactive. This was my first language and it holds a special place in my heart",
+			"Javascript is a high-level compiled programming language. JavaScript code is executed on the client side, meaning that it runs directly in the user's web browser, rather than on a server. This allows for a more responsive and interactive user experience. Its intent is to make the web a little more interactive. This was my first language and it holds a special place in my heart",
 	},
 	{
 		technologie: 'Node.js',

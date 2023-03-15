@@ -78,7 +78,7 @@ export const PageSubTitle = styled.h2`
 
 export const MainParagraph = styled.p`
 	font-size: 1.6rem;
-	color: #ffffffb3;
+	color: #ffffff;
 	a {
 		color: #a374ff;
 		transition: all 250ms;
