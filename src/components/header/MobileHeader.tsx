@@ -24,7 +24,12 @@ const MobileHeader = ({ isDarkTheme, setIsDarkTheme }: ThemeSwitchProps) => {
 	return (
 		<MobileHeaderWrapper>
 			<HeaderLeft>
-				<LogoContainer onClick={scrollToTop} isDarkTheme={isDarkTheme as boolean}>
+				<LogoContainer
+					onClick={scrollToTop}
+					isDarkTheme={isDarkTheme as boolean}
+					as={Link as any}
+					href='/'
+					scroll={false}>
 					<Image src={logo} alt='malachi padilla' />
 				</LogoContainer>
 			</HeaderLeft>
