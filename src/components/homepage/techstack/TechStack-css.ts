@@ -66,19 +66,19 @@ export const TechList = styled.ul<TechProps>`
 
 	& > li {
 		font-size: 1.6rem;
-		color: #fff;
+		color: ${(props) => props.theme.typography.primary};
 		cursor: pointer;
 		padding-left: 1.6rem;
-		border-left: 2px solid #fff;
+		border-left: 2px solid ${(props) => props.theme.typography.primary};
 	}
 
 	li:hover {
 		:hover {
-			border-color: #a374ff;
+			border-color: ${(props) => props.theme.purple};
 		}
 	}
 	li:nth-of-type(1) {
-		border-color: ${(props) => (props.info === 1 ? '#a374ff' : '')};
+		border-color: ${(props) => (props.info === 1 ? props.theme.purple : '')};
 
 		ul {
 			opacity: ${(props) => (props.info === 1 ? '1' : '0')};
@@ -86,7 +86,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 	}
 	li:nth-of-type(2) {
-		border-color: ${(props) => (props.info === 2 ? '#a374ff' : '')};
+		border-color: ${(props) => (props.info === 2 ? props.theme.purple : '')};
 
 		ul {
 			opacity: ${(props) => (props.info === 2 ? '1' : '0')};
@@ -94,7 +94,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 	}
 	li:nth-of-type(3) {
-		border-color: ${(props) => (props.info === 3 ? '#a374ff' : '')};
+		border-color: ${(props) => (props.info === 3 ? props.theme.purple : '')};
 
 		ul {
 			opacity: ${(props) => (props.info === 3 ? '1' : '0')};
@@ -102,7 +102,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 	}
 	li:nth-of-type(4) {
-		border-color: ${(props) => (props.info === 4 ? '#a374ff' : '')};
+		border-color: ${(props) => (props.info === 4 ? props.theme.purple : '')};
 
 		ul {
 			opacity: ${(props) => (props.info === 4 ? '1' : '0')};
@@ -110,7 +110,7 @@ export const TechList = styled.ul<TechProps>`
 		}
 	}
 	li:nth-of-type(5) {
-		border-color: ${(props) => (props.info === 5 ? '#a374ff' : '')};
+		border-color: ${(props) => (props.info === 5 ? props.theme.purple : '')};
 
 		ul {
 			opacity: ${(props) => (props.info === 5 ? '1' : '0')};
@@ -149,7 +149,7 @@ export const StackWrap = styled.div<TechProps>`
 		width: 250px;
 		height: 250px;
 		aspect-ratio: 1;
-		background-color: #a9a9a9;
+		background-color: ${(props) => props.theme.typography.primary};
 		border-radius: 1rem;
 		filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
 		transform: rotate(45deg) rotateX(30deg) rotateY(-30deg);
@@ -160,15 +160,15 @@ export const StackWrap = styled.div<TechProps>`
 		&:nth-of-type(1) {
 			top: 0;
 			z-index: 5;
-			background-color: ${(props) => (props.info === 1 ? '#a374ff' : '')};
+			background-color: ${(props) => (props.info === 1 ? props.theme.purple : '')};
 			:hover {
-				background-color: #a374ff;
+				background-color: ${(props) => props.theme.purple};
 			}
 		}
 		&:nth-of-type(2) {
 			top: 10%;
 			z-index: 4;
-			background-color: ${(props) => (props.info === 2 ? '#a374ff' : '')};
+			background-color: ${(props) => (props.info === 2 ? props.theme.purple : '')};
 			:hover {
 				background-color: #a374ff;
 			}
@@ -176,7 +176,7 @@ export const StackWrap = styled.div<TechProps>`
 		&:nth-of-type(3) {
 			top: 20%;
 			z-index: 3;
-			background-color: ${(props) => (props.info === 3 ? '#a374ff' : '')};
+			background-color: ${(props) => (props.info === 3 ? props.theme.purple : '')};
 			:hover {
 				background-color: #a374ff;
 			}
@@ -184,7 +184,7 @@ export const StackWrap = styled.div<TechProps>`
 		&:nth-of-type(4) {
 			top: 30%;
 			z-index: 2;
-			background-color: ${(props) => (props.info === 4 ? '#a374ff' : '')};
+			background-color: ${(props) => (props.info === 4 ? props.theme.purple : '')};
 			:hover {
 				background-color: #a374ff;
 			}
@@ -192,7 +192,7 @@ export const StackWrap = styled.div<TechProps>`
 		&:nth-of-type(5) {
 			top: 40%;
 			z-index: 1;
-			background-color: ${(props) => (props.info === 5 ? '#a374ff' : '')};
+			background-color: ${(props) => (props.info === 5 ? props.theme.purple : '')};
 			:hover {
 				background-color: #a374ff;
 			}

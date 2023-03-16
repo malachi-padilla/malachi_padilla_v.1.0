@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FancyTitle = styled.h2`
 	font-size: 5rem;
 	line-height: 5rem;
-	color: #fff;
+	color: ${(props) => props.theme.typography.primary};
 	margin: 0;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -23,29 +23,17 @@ export const FancyTitle = styled.h2`
 	}
 `;
 
-export const FancyTitleSecondary = styled.h2`
-	font-size: 3rem;
-	line-height: 5rem;
-	color: #fff;
-	margin: 0;
-	text-transform: uppercase;
-	font-weight: 900;
-	letter-spacing: -1px;
-	text-align: left;
-	width: 100%;
-`;
-
 export const PreTitle = styled.span`
 	font-size: 1.6rem;
 	font-weight: 900;
 	text-transform: uppercase;
-	-webkit-text-stroke: 1px #fff;
+	-webkit-text-stroke: 1px ${(props) => props.theme.typography.primary};
 	color: transparent;
 `;
 
 export const PageTitle = styled.h1`
 	font-size: 8rem;
-	color: #fff;
+	color: ${(props) => props.theme.typography.primary};
 	margin: 0;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -59,7 +47,7 @@ export const PageTitle = styled.h1`
 
 export const PageSubTitle = styled.h2`
 	font-size: 4rem;
-	color: #fff;
+	color: ${(props) => props.theme.typography.primary};
 	margin: 0;
 	text-transform: uppercase;
 	line-height: 4rem;
@@ -78,12 +66,12 @@ export const PageSubTitle = styled.h2`
 
 export const MainParagraph = styled.p`
 	font-size: 1.6rem;
-	color: #ffffffb3;
+	color: ${(props) => props.theme.typography.primary};
 	a {
-		color: #a374ff;
+		color: ${(props) => props.theme.purple};
 		transition: all 250ms;
 		:hover {
-			color: #00d9b8;
+			color: ${(props) => props.theme.cyan};
 		}
 	}
 `;

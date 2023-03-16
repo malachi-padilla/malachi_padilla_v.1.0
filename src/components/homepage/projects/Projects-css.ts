@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import styled from 'styled-components';
 
 interface ProjectProps {
@@ -17,7 +16,7 @@ export const ContentContainer = styled.div`
 	flex-direction: column;
 	height: 100%;
 	gap: 2.5rem;
-	width: 100%;
+	width: 50%;
 	@media (max-width: 1500px) {
 		width: 60%;
 	}
@@ -44,7 +43,7 @@ export const ProjectPreview = styled.div<ProjectProps>`
 	height: auto;
 	width: 90%;
 	aspect-ratio: 4/2;
-	background-color: #a374ff;
+	background-color: ${(props) => props.theme.purple};
 	background-image: url(${(props) => props.preview});
 	background-blend-mode: overlay;
 	background-position: top;
@@ -77,7 +76,7 @@ export const ProjectMeta = styled.div<ProjectProps>`
 	top: 0;
 	margin: auto;
 	filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
-	background: linear-gradient(#19191a, #19191a) padding-box,
+	background: linear-gradient(${(props) => props.theme.primary}, ${(props) => props.theme.primary}) padding-box,
 		linear-gradient(to right, #ffd074, #a374ff, #00d9b8) border-box;
 	border: 0.1rem solid transparent;
 	border-radius: 0.4rem;
@@ -102,7 +101,7 @@ export const ProjectMeta = styled.div<ProjectProps>`
 		li {
 			font-size: 1.4rem;
 			text-transform: capitalize;
-			color: #a9a9a9;
+			color: #a374ff;
 		}
 
 		li:not(:last-of-type)::after {
@@ -148,6 +147,7 @@ export const ProjectMetaMobile = styled.div`
 	background-color: #a374ff30;
 	padding: 3rem;
 	gap: 1.6rem;
+	color: #fff;
 
 	h2 {
 		font-size: 2.8rem;
@@ -167,7 +167,7 @@ export const ProjectMetaMobile = styled.div`
 		li {
 			font-size: 1.6rem;
 			text-transform: capitalize;
-			color: #a374ff;
+			color: ${(props) => props.theme.purple};
 		}
 
 		li:not(:last-of-type)::after {
@@ -179,7 +179,7 @@ export const ProjectMetaMobile = styled.div`
 		font-size: 2rem;
 		transition: all 250ms;
 		:hover {
-			color: #a374ff;
+			color: ${(props) => props.theme.purple};
 		}
 	}
 `;

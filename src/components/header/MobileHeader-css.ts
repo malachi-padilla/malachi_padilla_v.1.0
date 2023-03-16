@@ -1,9 +1,49 @@
+import { spin } from '@/theme/animations/animation';
+import { ThemeSwitchProps } from '@/types/staticTypes';
 import styled from 'styled-components';
-import { linkProps } from '../Header-css';
 
 interface BurgerProps {
 	open: boolean;
 }
+
+interface LinkProps {
+	name: string;
+}
+
+export const HeaderLeft = styled.div`
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+`;
+
+export const HeaderRight = styled.div`
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+`;
+
+export const LogoContainer = styled.div<ThemeSwitchProps>`
+	height: 100%;
+	width: fit-content;
+	justify-content: flex-start;
+	align-items: center;
+	filter: invert(${(props) => (props.isDarkTheme ? '0' : '1')});
+	img {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 1;
+		animation: ${spin} 1.5s alternate ease-out;
+		transition: transform 1.5s ease-out;
+		&:hover {
+			transform: rotate(360deg);
+			cursor: pointer;
+		}
+	}
+`;
 
 export const MobileHeaderWrapper = styled.div`
 	display: flex;
@@ -20,9 +60,21 @@ export const MobileHeaderWrapper = styled.div`
 	}
 `;
 
+export const ThemeSwitchButton = styled.button`
+	height: 50%;
+	background-color: transparent;
+	color: ${(props) => props.theme.typography.primary};
+	font-size: 2.4rem;
+	width: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	cursor: pointer;
+	filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
+`;
+
 export const BurgerMenu = styled.button<BurgerProps>`
 	height: 100%;
-	width: fit-content;
+	width: 15%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -31,10 +83,11 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	align-items: flex-end;
 	z-index: 3;
 	cursor: pointer;
+	position: relative;
 	span {
 		height: 0.2rem;
 		border-radius: 0.2rem;
-		background-color: #fff;
+		background-color: ${(props) => (props.open ? '#fff' : props.theme.typography.primary)};
 		position: ${(props) => (props.open ? 'absolute' : 'unset')};
 	}
 	span:first-of-type {
@@ -52,12 +105,15 @@ export const BurgerMenu = styled.button<BurgerProps>`
 		width: ${(props) => (props.open ? '5rem' : '6rem')};
 		transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'rotate(0)')};
 	}
+	@media (max-width: 768px) {
+		width: 50%;
+	}
 `;
 
 export const MobileNavWrapper = styled.nav<BurgerProps>`
 	height: 100vh;
 	width: ${(props) => (props.open ? '100%' : '0')};
-	background-color: #a374ff;
+	background-color: ${(props) => props.theme.purple};
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -77,7 +133,7 @@ export const MobileLinkList = styled.ul`
 	padding: 1rem;
 `;
 
-export const MobileLinkItem = styled.li<linkProps>`
+export const MobileLinkItem = styled.li<LinkProps>`
 	overflow: hidden;
 	& a {
 		font-size: 4rem;

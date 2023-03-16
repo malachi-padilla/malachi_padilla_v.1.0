@@ -1,20 +1,22 @@
-import { MainParagraph, PageSubTitle, PageTitle, PreTitle } from '@/theme/layout/typography';
-import React from 'react';
-import { HeroButton, HeroText, HeroWrap } from './Hero-css';
+import { FancyButton } from '@/theme/components/webComponents';
+import { MainParagraph, PageSubTitle, PageTitle, PreTitle } from '@/theme/typography/typography';
+import { HeroText, HeroWrap } from './Hero-css';
 
 const Hero = () => {
 	return (
 		<HeroWrap>
 			<HeroText>
-				<PreTitle>Hello 👋, my name is</PreTitle>
+				<PreTitle>Hello, my name is</PreTitle>
 				<PageTitle>Malachi Padilla</PageTitle>
-				<PageSubTitle>Frontend Developer & Designer</PageSubTitle>
+				<PageSubTitle>Frontend Developer &amp; Designer</PageSubTitle>
 				<MainParagraph>
-					I&apos;m passionate about designing, developing, and launching beautiful user experiences. If you need help
-					building your next idea, or need an innovative frontend developer on your team, I&apos;d love to here about
-					it!
+					Hello there! I am passionate about creating modern, user-friendly experiences that resonate with people.
+					Whether you need assistance bringing your next big idea to fruition or are seeking an innovative front-end
+					developer to join your team, I am here and eager to chat! I take great pride in my work and am committed to
+					crafting experiences that are both visually stunning and highly functional. So, tell me more about your
+					project and let&apos;s work together to bring your vision to life!
 				</MainParagraph>
-				<HeroButton href='#contact'>Work With Me!</HeroButton>
+				<FancyButton href='#contact'>Work With Me!</FancyButton>
 			</HeroText>
 		</HeroWrap>
 	);

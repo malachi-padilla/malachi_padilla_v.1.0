@@ -12,6 +12,7 @@ export const FooterContainer = styled.footer`
 	justify-content: center;
 	p {
 		font-size: 1.4rem;
+		color: #fff;
 	}
 `;
 

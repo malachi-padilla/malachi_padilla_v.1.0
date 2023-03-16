@@ -16,7 +16,6 @@ export const CommonSection = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* overflow-x: hidden; */
 	padding: 0 1rem;
 	gap: 10rem;
 	margin-bottom: 10rem;
@@ -31,4 +30,13 @@ export const TextContainer = styled.div`
 	flex-grow: 1;
 	width: 100%;
 	gap: 1.6rem;
+`;
+
+export const HeaderWrapper = styled.nav`
+	display: flex;
+	width: 100%;
+	height: 10vh;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 4rem;
 `;

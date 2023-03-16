@@ -1,6 +1,6 @@
 import { projectList } from '@/lib/staticObjects';
 import { TextContainer } from '@/theme/layout/containers';
-import { FancyTitle, PreTitle } from '@/theme/layout/typography';
+import { FancyTitle, PreTitle } from '@/theme/typography/typography';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
@@ -31,7 +31,7 @@ const Projects = () => {
 				<TextContainer>
 					<PreTitle> Featured Projects</PreTitle>
 					<FancyTitle>
-						Some Frontend <span>experiences</span> i&apos;ve created
+						Frontend <span>experiences</span> i&apos;ve created
 					</FancyTitle>
 				</TextContainer>
 				{projectList.map((project, index) => (

@@ -11,3 +11,7 @@ export const scrollToTop = () => {
 	if (!isBrowser()) return;
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+export const getYear = () => {
+	return new Date().getFullYear();
+};
