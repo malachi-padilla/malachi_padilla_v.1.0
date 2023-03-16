@@ -76,6 +76,7 @@ export const ProjectMeta = styled.div<ProjectProps>`
 	top: 0;
 	margin: auto;
 	filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
+	-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
 	background: linear-gradient(${(props) => props.theme.primary}, ${(props) => props.theme.primary}) padding-box,
 		linear-gradient(to right, #ffd074, #a374ff, #00d9b8) border-box;
 	border: 0.1rem solid transparent;
@@ -131,6 +132,7 @@ export const ProjectContainerMobile = styled.div<ProjectPropsMobile>`
 	overflow: hidden;
 	background-blend-mode: multiply;
 	filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
+	-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
 	aspect-ratio: 1;
 	@media (min-width: 768px) {
 		aspect-ratio: 4/2;

@@ -69,6 +69,7 @@ export const StoryImage = styled.div`
 		object-position: top;
 		border-radius: 1rem;
 		filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
+		-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #a374ff);
 		background: linear-gradient(#a374ff, #00d9b8) padding-box,
 			linear-gradient(to right, #ffd074, #a374ff, #00d9b8) border-box;
 		border: 0.1rem solid transparent;

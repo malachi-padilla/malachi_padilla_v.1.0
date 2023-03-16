@@ -153,6 +153,7 @@ export const StackWrap = styled.div<TechProps>`
 		background-color: ${(props) => props.theme.typography.primary};
 		border-radius: 1rem;
 		filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
+		-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
 		transform: rotate(45deg) rotateX(30deg) rotateY(-30deg);
 		position: absolute;
 		opacity: 0.9;

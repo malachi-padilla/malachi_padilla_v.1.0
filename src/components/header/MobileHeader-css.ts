@@ -71,6 +71,7 @@ export const ThemeSwitchButton = styled.button`
 	border-radius: 50%;
 	cursor: pointer;
 	filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
+	-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
 `;
 
 export const BurgerMenu = styled.button<BurgerProps>`

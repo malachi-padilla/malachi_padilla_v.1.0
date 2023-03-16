@@ -91,6 +91,7 @@ export const SubmitButton = styled.input`
 		background: ${(props) => props.theme.cyan};
 		color: #fff;
 		filter: drop-shadow(0.1rem 0.1rem 0.75rem #00d9b8);
+		-webkit-filter: drop-shadow(0.1rem 0.1rem 0.75rem #00d9b8);
 	}
 `;
 
