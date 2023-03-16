@@ -2,9 +2,9 @@ import { IProjectList, ITechList, link } from '@/types/staticTypes';
 import WindPreview from '@/assets/wind-1.png';
 
 export const navLinks: link[] = [
-	{ name: 'About', path: '#about' },
-	{ name: 'Projects', path: '#projects' },
-	{ name: 'Contact', path: '#contact' },
+	{ name: 'About', path: '/#about' },
+	{ name: 'Projects', path: '/#projects' },
+	{ name: 'Contact', path: '/#contact' },
 ];
 
 export const techStackList: ITechList[] = [
