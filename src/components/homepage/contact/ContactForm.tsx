@@ -1,19 +1,10 @@
 import { MailData } from '@/pages/api/types/apiTypes';
+import { CustomInput, CustomLabel, CustomtextArea, SubmitButton } from '@/theme/components/webComponents';
 import { TextContainer } from '@/theme/layout/containers';
 import { FancyTitle, PreTitle } from '@/theme/typography/typography';
 
 import React, { useState } from 'react';
-import {
-	ButtonRow,
-	ContactSection,
-	ContentWrapper,
-	CustomInput,
-	CustomLabel,
-	FormWrap,
-	FromGroup,
-	Loader,
-	SubmitButton,
-} from './ContactForm-css';
+import { ButtonRow, ContactSection, ContentWrapper, FormWrap, FromGroup, Loader } from './ContactForm-css';
 
 const ContactForm = () => {
 	const [name, setName] = useState<string>('');
@@ -92,14 +83,14 @@ const ContactForm = () => {
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</FromGroup>
-					<textarea
+					<CustomtextArea
 						name='details'
 						id='user_details'
 						cols={30}
 						rows={5}
 						placeholder='Your message'
 						value={message}
-						onChange={(e) => setMessage(e.target.value)}></textarea>
+						onChange={(e) => setMessage(e.target.value)}></CustomtextArea>
 					<ButtonRow>
 						<SubmitButton type='submit' value='Send it 🚀' />
 					</ButtonRow>

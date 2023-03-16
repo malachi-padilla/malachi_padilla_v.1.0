@@ -1,6 +1,7 @@
+import { FancyButton } from '@/theme/components/webComponents';
 import { MainParagraph, PageSubTitle, PageTitle, PreTitle } from '@/theme/typography/typography';
 import React from 'react';
-import { HeroButton, HeroText, HeroWrap } from './Hero-css';
+import { HeroText, HeroWrap } from './Hero-css';
 
 const Hero = () => {
 	return (
@@ -16,7 +17,7 @@ const Hero = () => {
 					crafting experiences that are both visually stunning and highly functional. So, tell me more about your
 					project and let&apos;s work together to bring your vision to life!
 				</MainParagraph>
-				<HeroButton href='#contact'>Work With Me!</HeroButton>
+				<FancyButton href='#contact'>Work With Me!</FancyButton>
 			</HeroText>
 		</HeroWrap>
 	);

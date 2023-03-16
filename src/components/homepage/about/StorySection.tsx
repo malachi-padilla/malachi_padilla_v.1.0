@@ -1,9 +1,9 @@
 import { FancyTitle, MainParagraph, PreTitle } from '@/theme/typography/typography';
 import Image from 'next/image';
 import React from 'react';
-import { HeroButton } from '../Hero-css';
 import ProfilePhoto from '@/assets/profile.png';
 import { StoryImage, StoryText, StorySectionWrap } from './StorySection-css';
+import { FancyButton } from '@/theme/components/webComponents';
 
 const StorySection = () => {
 	return (
@@ -20,10 +20,9 @@ const StorySection = () => {
 					learn the fundamentals of programming and quickly fell in love with it.
 				</MainParagraph>
 				<MainParagraph>
-					Despite being confined to my mother&apos;s closet due to my injury, I found that this forced solitude was the
-					perfect opportunity to focus on developing my skills and exploring this new career path. Today, I am grateful
-					for the difficult circumstances that led me to discover my passion for programming and excited about the
-					endless possibilities that lie ahead.
+					I found that being stuck at home was the perfect opportunity to focus on developing my skills and exploring
+					this new career path. Today, I am grateful for the difficult circumstances that led me to discover my passion
+					for programming and excited about the endless possibilities that lie ahead.
 				</MainParagraph>
 
 				<MainParagraph>
@@ -39,7 +38,7 @@ const StorySection = () => {
 					As of now, i&apos;m looking for work with a bigger company that can offer more growth and propel my learning
 					even further.
 				</MainParagraph>
-				<HeroButton href='#contact'>get in touch</HeroButton>
+				<FancyButton href='#contact'>get in touch</FancyButton>
 			</StoryText>
 			<StoryImage>
 				<Image src={ProfilePhoto} alt='me in a tux' />

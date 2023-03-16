@@ -58,6 +58,18 @@ export const MobileHeaderWrapper = styled.div`
 	}
 `;
 
+export const ThemeSwitchButton = styled.button`
+	height: 50%;
+	background-color: #fff;
+	color: #1d1d1f;
+	font-size: 1.6rem;
+	width: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	cursor: pointer;
+	filter: drop-shadow(0.1rem 0.1rem 0.75rem #1d1d1f30);
+`;
+
 export const BurgerMenu = styled.button<BurgerProps>`
 	height: 100%;
 	width: 15%;
@@ -73,7 +85,7 @@ export const BurgerMenu = styled.button<BurgerProps>`
 	span {
 		height: 0.2rem;
 		border-radius: 0.2rem;
-		background-color: #fff;
+		background-color: ${(props) => (props.open ? '#fff' : props.theme.typography.primary)};
 		position: ${(props) => (props.open ? 'absolute' : 'unset')};
 	}
 	span:first-of-type {
@@ -91,12 +103,15 @@ export const BurgerMenu = styled.button<BurgerProps>`
 		width: ${(props) => (props.open ? '5rem' : '6rem')};
 		transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'rotate(0)')};
 	}
+	@media (max-width: 768px) {
+		width: 50%;
+	}
 `;
 
 export const MobileNavWrapper = styled.nav<BurgerProps>`
 	height: 100vh;
 	width: ${(props) => (props.open ? '100%' : '0')};
-	background-color: #a374ff;
+	background-color: ${(props) => props.theme.purple};
 	position: absolute;
 	top: 0;
 	right: 0;

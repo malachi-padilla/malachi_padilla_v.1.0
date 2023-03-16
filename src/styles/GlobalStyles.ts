@@ -30,9 +30,9 @@ body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	font-family: ${rubik.style.fontFamily};
-	background-color: #1d1d1f;
+	background-color: ${(props) => props.theme.primary};
 	overflow-x: hidden;
-	color: #fff;
+	color: ${(props) => props.theme.typography.primary};
 	&::-webkit-scrollbar{
 		display: none;
 	}
@@ -68,8 +68,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #fff;
-  color: #fff;
+  -webkit-text-fill-color: ${(props) => props.theme.typography.primary};;
+  color: ${(props) => props.theme.typography.primary};;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }

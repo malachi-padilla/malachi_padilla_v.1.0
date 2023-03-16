@@ -24,3 +24,8 @@ export interface IProjectList {
 	preview: StaticImageData;
 	link?: string;
 }
+
+export interface ThemeSwitchProps {
+	isDarkTheme: boolean;
+	setIsDarkTheme: any;
+}
