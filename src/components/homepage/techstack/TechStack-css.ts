@@ -136,7 +136,7 @@ export const ContentRight = styled.div`
 `;
 
 export const StackWrap = styled.div<TechProps>`
-	height: 90vh;
+	height: 80rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
