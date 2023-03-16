@@ -60,9 +60,9 @@ export const MobileHeaderWrapper = styled.div`
 
 export const ThemeSwitchButton = styled.button`
 	height: 50%;
-	background-color: #fff;
-	color: #1d1d1f;
-	font-size: 1.6rem;
+	background-color: transparent;
+	color: ${(props) => props.theme.typography.primary};
+	font-size: 2.4rem;
 	width: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;

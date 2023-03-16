@@ -1,6 +1,5 @@
 import { FancyTitle, MainParagraph, PreTitle } from '@/theme/typography/typography';
 import Image from 'next/image';
-import React from 'react';
 import ProfilePhoto from '@/assets/profile.png';
 import { StoryImage, StoryText, StorySectionWrap } from './StorySection-css';
 import { FancyButton } from '@/theme/components/webComponents';

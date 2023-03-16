@@ -1,4 +1,3 @@
-import React from 'react';
 import Footer from './footer/Footer';
 import MobileHeader from './header/MobileHeader';
 

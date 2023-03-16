@@ -1,6 +1,5 @@
 import { FancyButton } from '@/theme/components/webComponents';
 import { MainParagraph, PageSubTitle, PageTitle, PreTitle } from '@/theme/typography/typography';
-import React from 'react';
 import { HeroText, HeroWrap } from './Hero-css';
 
 const Hero = () => {
