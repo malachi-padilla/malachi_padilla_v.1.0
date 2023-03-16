@@ -26,6 +26,6 @@ export interface IProjectList {
 }
 
 export interface ThemeSwitchProps {
-	isDarkTheme: boolean;
-	setIsDarkTheme: any;
+	isDarkTheme?: boolean;
+	setIsDarkTheme?: any;
 }

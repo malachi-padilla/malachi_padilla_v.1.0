@@ -1,4 +1,5 @@
 import { spin } from '@/theme/animations/animation';
+import { ThemeSwitchProps } from '@/types/staticTypes';
 import styled from 'styled-components';
 
 interface BurgerProps {
@@ -25,11 +26,12 @@ export const HeaderRight = styled.div`
 	align-items: center;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.div<ThemeSwitchProps>`
 	height: 100%;
 	width: fit-content;
 	justify-content: flex-start;
 	align-items: center;
+	filter: invert(${(props) => (props.isDarkTheme ? '0' : '1')});
 	img {
 		height: 100%;
 		width: auto;
