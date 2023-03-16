@@ -48,7 +48,7 @@ export const LogoContainer = styled.div<ThemeSwitchProps>`
 export const MobileHeaderWrapper = styled.div`
 	display: flex;
 	width: 100%;
-	height: 10vh;
+	height: 7rem;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 0 1rem;
@@ -65,6 +65,7 @@ export const ThemeSwitchButton = styled.button`
 	background-color: transparent;
 	color: ${(props) => props.theme.typography.primary};
 	font-size: 2.4rem;
+	display: none;
 	width: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;

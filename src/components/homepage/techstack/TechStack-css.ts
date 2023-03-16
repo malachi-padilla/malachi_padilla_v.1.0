@@ -68,6 +68,7 @@ export const TechList = styled.ul<TechProps>`
 		font-size: 1.6rem;
 		color: ${(props) => props.theme.typography.primary};
 		cursor: pointer;
+		width: 100%;
 		padding-left: 1.6rem;
 		border-left: 2px solid ${(props) => props.theme.typography.primary};
 	}

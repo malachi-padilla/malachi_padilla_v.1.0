@@ -35,7 +35,7 @@ export const TextContainer = styled.div`
 export const HeaderWrapper = styled.nav`
 	display: flex;
 	width: 100%;
-	height: 10vh;
+	height: 7rem;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 0 4rem;

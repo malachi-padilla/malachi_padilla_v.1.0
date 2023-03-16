@@ -16,11 +16,7 @@ const TechStack = () => {
 				<MainParagraph>It all started with HTML, CSS, and JavaScript.</MainParagraph>
 				<TechList info={infoOpen}>
 					{techStackList.map((item, index) => (
-						<li
-							key={index}
-							onClick={() => setInfoOpen(item.stackPosition)}
-							onMouseEnter={() => setInfoOpen(item.stackPosition)}
-							onMouseLeave={() => setInfoOpen(null)}>
+						<li key={index} onClick={() => setInfoOpen(item.stackPosition)}>
 							<h4>{item.technologie}</h4>
 							<ul>
 								<li>{item.techInfo}</li>
@@ -35,8 +31,7 @@ const TechStack = () => {
 						<div
 							key={index}
 							onClick={() => setInfoOpen(item.stackPosition)}
-							onMouseEnter={() => setInfoOpen(item.stackPosition)}
-							onMouseLeave={() => setInfoOpen(null)}></div>
+							onMouseEnter={() => setInfoOpen(item.stackPosition)}></div>
 					))}
 				</StackWrap>
 			</ContentRight>
