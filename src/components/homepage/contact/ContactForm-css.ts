@@ -102,7 +102,7 @@ export const LoadingSkeleton = styled.div`
 			left: 0;
 			height: 100%;
 			transform: translateX(-100%);
-			background-image: linear-gradient(45deg, transparent 10%, #3c3c3b);
+			background-image: linear-gradient(45deg, transparent 10%, ${(props) => props.theme.tertiary});
 			animation: ${shimmer} 1.5s infinite;
 		}
 	}

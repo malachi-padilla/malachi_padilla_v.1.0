@@ -14,8 +14,8 @@ export const DarkTheme: DefaultTheme = {
 
 export const LightTheme: DefaultTheme = {
 	primary: '#fff',
-	secondary: '#e2e2e0',
-	tertiary: '#e6e6e5',
+	secondary: '#f2f2f7',
+	tertiary: '#f7f7f7',
 	typography: {
 		primary: '#1d1d1f',
 	},
