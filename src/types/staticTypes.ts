@@ -29,3 +29,7 @@ export interface ThemeSwitchProps {
 	isDarkTheme?: boolean;
 	setIsDarkTheme?: any;
 }
+
+export interface FormMessageProps {
+	formState: string;
+}
