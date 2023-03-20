@@ -65,7 +65,6 @@ export const ThemeSwitchButton = styled.button`
 	background-color: transparent;
 	color: ${(props) => props.theme.typography.primary};
 	font-size: 2.4rem;
-	display: none;
 	width: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;

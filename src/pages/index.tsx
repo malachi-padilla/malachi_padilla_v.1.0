@@ -2,10 +2,12 @@ import CursorBlob from '@/components/cursorBlob/CursorBlob';
 import ContactForm from '@/components/homepage/contact/ContactForm';
 import Hero from '@/components/homepage/Hero';
 import StorySection from '@/components/homepage/about/StorySection';
-import { CommonSection, PageWrapper } from '@/theme/layout/containers';
+import { CommonSection, PageWrapper, TextContainer } from '@/theme/layout/containers';
 import Head from 'next/head';
 import TechStack from '@/components/homepage/techstack/TechStack';
 import Projects from '@/components/homepage/projects/Projects';
+import { ContactSection, ContentWrapper } from '@/components/homepage/contact/ContactForm-css';
+import { FancyTitle, PreTitle } from '@/theme/typography/typography';
 
 export default function Home() {
 	return (
@@ -25,7 +27,17 @@ export default function Home() {
 				<CommonSection id='projects'>
 					<Projects />
 				</CommonSection>
-				<ContactForm />
+				<ContactSection id='contact'>
+					<ContentWrapper>
+						<TextContainer>
+							<PreTitle>Contact</PreTitle>
+							<FancyTitle>
+								Let&apos;s Build Something <span>Awesome</span> Together.
+							</FancyTitle>
+						</TextContainer>
+						<ContactForm />
+					</ContentWrapper>
+				</ContactSection>
 				<CursorBlob />
 			</PageWrapper>
 		</>

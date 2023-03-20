@@ -34,9 +34,9 @@ const MobileHeader = ({ isDarkTheme, setIsDarkTheme }: ThemeSwitchProps) => {
 				</LogoContainer>
 			</HeaderLeft>
 			<HeaderRight>
-				<ThemeSwitchButton onClick={() => setIsDarkTheme(!isDarkTheme)}>
+				{/* <ThemeSwitchButton onClick={() => setIsDarkTheme(!isDarkTheme)}>
 					<FontAwesomeIcon icon={isDarkTheme ? faSun : faMoon} />
-				</ThemeSwitchButton>
+				</ThemeSwitchButton> */}
 				<BurgerMenu open={burgerMenuOpen} onClick={() => setBurgerMenuOpen(!burgerMenuOpen)}>
 					<span></span>
 					<span></span>

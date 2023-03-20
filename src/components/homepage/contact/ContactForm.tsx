@@ -1,22 +1,24 @@
 import { MailData } from '@/pages/api/types/apiTypes';
 import { CustomInput, CustomLabel, CustomtextArea, SubmitButton } from '@/theme/components/webComponents';
-import { TextContainer } from '@/theme/layout/containers';
-import { FancyTitle, PreTitle } from '@/theme/typography/typography';
-
 import React, { useState } from 'react';
-import { ButtonRow, ContactSection, ContentWrapper, FormWrap, FromGroup, Loader } from './ContactForm-css';
+import { ButtonRow, FormWrap, FromGroup, LoadingSkeleton } from './ContactForm-css';
+import FormMessage from './FormMessage';
 
 const ContactForm = () => {
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
-	const [submitted, setSubmitted] = useState<boolean>(false);
-	const [error, setError] = useState<boolean>(false);
-	const [sendLoader, setSendLoader] = useState<boolean>(false);
+	const [formState, setFormState] = useState<string>('');
+
+	const handleInitialState = () => {
+		setTimeout(() => {
+			setFormState('');
+		}, 10000);
+	};
 
 	const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>): void => {
 		e.preventDefault();
-		setSendLoader(true);
+		setFormState('loading');
 		let data: MailData = {
 			name,
 			email,
@@ -32,73 +34,84 @@ const ContactForm = () => {
 		})
 			.then((res) => {
 				if (res.status === 200) {
-					setSendLoader(false);
-					setSubmitted(true);
+					setFormState('success');
 					setName('');
 					setEmail('');
 					setMessage('');
+					handleInitialState();
 				} else {
-					setSendLoader(false);
-					setError(true);
+					setFormState('error');
+					handleInitialState();
 				}
 			})
 			.catch((err) => {
 				if (err) {
 					console.error(err);
-					setSendLoader(false);
-					setError(true);
+					setFormState('error');
+					handleInitialState();
 				}
 			});
 	};
 
-	return (
-		<ContactSection id='contact'>
-			<ContentWrapper>
-				<TextContainer>
-					<PreTitle>Contact</PreTitle>
-					<FancyTitle>
-						Let&apos;s Build Something <span>Awesome</span> Together.
-					</FancyTitle>
-				</TextContainer>
-				<FormWrap onSubmit={(e: any) => handleSubmit(e)}>
-					<FromGroup>
-						<CustomLabel htmlFor='user_name'>Your Name</CustomLabel>
-						<CustomInput
-							type='text'
-							id='user_name'
-							placeholder='Your name'
-							value={name}
-							required
-							onChange={(e) => setName(e.target.value)}
-						/>
-					</FromGroup>
-					<FromGroup>
-						<CustomLabel htmlFor='user_email'>Your Email</CustomLabel>
-						<CustomInput
-							value={email}
-							type='email'
-							id='user_email'
-							placeholder='Your Email'
-							required
-							onChange={(e) => setEmail(e.target.value)}
-						/>
-					</FromGroup>
-					<CustomtextArea
-						name='details'
-						id='user_details'
-						cols={30}
-						rows={5}
-						placeholder='Your message'
-						value={message}
-						onChange={(e) => setMessage(e.target.value)}></CustomtextArea>
-					<ButtonRow>
-						<SubmitButton type='submit' value='Send it 🚀' />
-					</ButtonRow>
-					{sendLoader ? <Loader>Loading...</Loader> : <></>}
+	if (formState === 'loading') {
+		return (
+			<FormWrap>
+				<LoadingSkeleton>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</LoadingSkeleton>
+			</FormWrap>
+		);
+	}
+
+	if (formState == 'error' || formState == 'success') {
+		return (
+			<>
+				<FormWrap>
+					<FormMessage formState={formState} />
 				</FormWrap>
-			</ContentWrapper>
-		</ContactSection>
-	);
+			</>
+		);
+	} else
+		return (
+			<FormWrap onSubmit={(e: any) => handleSubmit(e)}>
+				<FromGroup>
+					<CustomLabel htmlFor='user_name'>Your Name</CustomLabel>
+					<CustomInput
+						type='text'
+						id='user_name'
+						placeholder='Your name'
+						value={name}
+						required
+						onChange={(e) => setName(e.target.value)}
+					/>
+				</FromGroup>
+				<FromGroup>
+					<CustomLabel htmlFor='user_email'>Your Email</CustomLabel>
+					<CustomInput
+						value={email}
+						type='email'
+						id='user_email'
+						placeholder='Your Email'
+						required
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+				</FromGroup>
+				<CustomtextArea
+					name='details'
+					id='user_details'
+					cols={30}
+					rows={5}
+					placeholder='Your message'
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}></CustomtextArea>
+				<ButtonRow>
+					<SubmitButton type='submit' value='Send it 🚀' />
+				</ButtonRow>
+			</FormWrap>
+		);
 };
 
 export default ContactForm;
