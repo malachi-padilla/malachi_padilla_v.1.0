@@ -138,17 +138,21 @@ export const MessageBox = styled.div<FormMessageProps>`
 		border-radius: 1rem;
 		background: ${(props) => props.theme.secondary};
 		border: 1px solid ${(props) => (props.formState == 'success' ? '#00d9b8' : '#ff477e')};
+		font-size: 1.8em;
+		@media (max-width: 768px) {
+			width: 100%;
+			font-size: 1.6rem;
+		}
 		h3 {
 			font-size: 3.6rem;
 			text-transform: uppercase;
 			font-weight: 900;
+			@media (max-width: 768px) {
+				font-size: 2.4rem;
+			}
 			svg {
 				margin-left: 1rem;
 			}
-		}
-
-		p {
-			font-size: 1.8em;
 		}
 	}
 `;
