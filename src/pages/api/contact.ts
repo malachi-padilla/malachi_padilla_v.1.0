@@ -1,5 +1,5 @@
 import { NextApiResponse } from 'next';
-import { ExtendedNextApiRequest, MailData, MailOptionTypes } from './types/apiTypes';
+import { ExtendedNextApiRequest, MailData } from './types/apiTypes';
 import nodemailer from 'nodemailer';
 import { Options } from 'nodemailer/lib/mailer';
 
