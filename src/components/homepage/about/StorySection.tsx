@@ -34,7 +34,7 @@ const StorySection = () => {
 				</MainParagraph>
 				<MainParagraph>
 					As of now, i&apos;m continuing to work on and find projects that excite me. If you have an exciting
-					oppurtunity I&apos;d love to here about it!
+					opportunity I&apos;d love to hear about it!
 				</MainParagraph>
 				<FancyButton href='#contact'>get in touch</FancyButton>
 			</StoryText>
