@@ -26,16 +26,15 @@ const StorySection = () => {
 
 				<MainParagraph>
 					In the last few years I&apos;ve had the pleasure of working on many side-projects, websites for local
-					businesses and a{' '}
+					businesses, a{' '}
 					<a href='https://cookd.io/' target='_blank' rel='noreferrer'>
-						start-up{' '}
+						start-up
 					</a>
-					company. I now work for a small marketing agency in El Dorado hills, CA, where I build Custom WordPress &amp;
-					Shopify sites for a wide variety of clients, mainly in the off-road space.
+					, and a marketing agency.
 				</MainParagraph>
 				<MainParagraph>
-					As of now, i&apos;m looking for work with a bigger company that can offer more growth and propel my learning
-					even further.
+					As of now, i&apos;m continuing to work on and find projects that excite me. If you have an exciting
+					opportunity I&apos;d love to hear about it!
 				</MainParagraph>
 				<FancyButton href='#contact'>get in touch</FancyButton>
 			</StoryText>
