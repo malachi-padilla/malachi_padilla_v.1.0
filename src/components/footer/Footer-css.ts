@@ -21,6 +21,7 @@ export const SocialRow = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
+	margin: 1.6rem 0;
 `;
 
 export const SocialLink = styled.a`
