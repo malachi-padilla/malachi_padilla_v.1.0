@@ -10,7 +10,7 @@ export default function Home() {
 				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
 				<meta httpEquiv='Content-Type' content='text/html; charset=ISO-8859-1' />
 				<title>Malachi Padilla | Frontend Software Engineer</title>
-				<meta name='description' content='Full-Stack Software Engineer for hire'></meta>
+				<meta name='description' content='Front-end Software Engineer'></meta>
 			</Head>
 			<PageWrapper>
 				<PageInner>
