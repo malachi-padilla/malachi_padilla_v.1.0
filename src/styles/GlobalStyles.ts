@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Rubik } from '@next/font/google';
+import { Rubik } from 'next/font/google';
 const font = Rubik({ subsets: ['latin'] });
 import '@fontsource/ia-writer-mono';
 
