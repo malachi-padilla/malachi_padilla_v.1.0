@@ -1,9 +1,9 @@
 import Header from './header/Header';
 
-const Layout = ({ children, isDarkTheme, setIsDarkTheme }: any) => {
+const Layout = ({ children }: any) => {
 	return (
 		<>
-			<Header isDarkTheme={isDarkTheme as boolean} setIsDarkTheme={setIsDarkTheme} />
+			<Header />
 			<main>{children}</main>
 		</>
 	);
