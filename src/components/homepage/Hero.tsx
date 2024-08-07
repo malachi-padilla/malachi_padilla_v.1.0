@@ -11,7 +11,7 @@ const Hero = () => {
 			<HeroText>
 				<PageTitle>Malachi Padilla</PageTitle>
 				<PageSubTitle>Frontend Engineer</PageSubTitle>
-				<MainParagraph>I'm not looking for work right now...</MainParagraph>
+				<MainParagraph>I&apos;m not looking for work right now...</MainParagraph>
 				<SocialRow>
 					<SocialLink target='_blank' href='https://github.com/malachi-padilla?tab=repositories' rel='noreferrer'>
 						<FontAwesomeIcon className='icon' icon={faGithub} />
