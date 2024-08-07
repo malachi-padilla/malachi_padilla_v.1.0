@@ -17,7 +17,7 @@ const TechStack = () => {
 				<TechList info={infoOpen}>
 					{techStackList.map((item, index) => (
 						<li key={index} onClick={() => setInfoOpen(item.stackPosition)}>
-							<h4>{item.technologie}</h4>
+							<h4>{item.technology}</h4>
 							<ul>
 								<li>{item.techInfo}</li>
 							</ul>
