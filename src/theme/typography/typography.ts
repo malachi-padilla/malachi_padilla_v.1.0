@@ -37,10 +37,7 @@ export const PageTitle = styled.h1`
 	margin: 0;
 	text-transform: uppercase;
 	font-weight: 900;
-	line-height: 8rem;
-
 	@media (max-width: 768px) {
-		line-height: 5rem;
 		font-size: 5rem;
 	}
 `;
@@ -48,12 +45,10 @@ export const PageTitle = styled.h1`
 export const PageSubTitle = styled.h2`
 	font-size: 4rem;
 	color: ${(props) => props.theme.typography.primary};
-	margin: 0;
+	margin-bottom: 1.6rem;
 	text-transform: uppercase;
-	line-height: 4rem;
 	font-weight: 900;
 	color: #ffd074;
-	letter-spacing: -1px;
 	background: -webkit-linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
 	background: linear-gradient(to right, #ffd074, #a374ff, #00d9b8);
 	-webkit-background-clip: text;
@@ -67,6 +62,7 @@ export const PageSubTitle = styled.h2`
 export const MainParagraph = styled.p`
 	font-size: 1.6rem;
 	color: ${(props) => props.theme.typography.primary};
+	font-family: 'iA Writer Mono', monospace;
 	a {
 		color: ${(props) => props.theme.purple};
 		transition: all 250ms;

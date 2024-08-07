@@ -12,7 +12,7 @@ export interface ScrollToOptions {
 }
 
 export interface ITechList {
-	technologie: string;
+	technology: string;
 	stackPosition: number;
 	techInfo: string;
 }

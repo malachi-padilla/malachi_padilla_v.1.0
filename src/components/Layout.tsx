@@ -1,12 +1,10 @@
-import Footer from './footer/Footer';
-import MobileHeader from './header/MobileHeader';
+import Header from './header/Header';
 
-const Layout = ({ children, isDarkTheme, setIsDarkTheme }: any) => {
+const Layout = ({ children }: any) => {
 	return (
 		<>
-			<MobileHeader isDarkTheme={isDarkTheme as boolean} setIsDarkTheme={setIsDarkTheme} />
+			<Header />
 			<main>{children}</main>
-			<Footer />
 		</>
 	);
 };

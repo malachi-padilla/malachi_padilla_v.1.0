@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import { Rubik } from '@next/font/google';
-const rubik = Rubik({ subsets: ['latin'] });
+import { Rubik } from 'next/font/google';
+const font = Rubik({ subsets: ['latin'] });
+import '@fontsource/ia-writer-mono';
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -27,15 +28,16 @@ html {
 
 
 body {
-	line-height: 1.5;
+	line-height: 1.1;
 	-webkit-font-smoothing: antialiased;
-	font-family: ${rubik.style.fontFamily};
+	font-family: ${font.style.fontFamily};
 	background-color: ${(props) => props.theme.primary};
 	overflow-x: hidden;
 	color: ${(props) => props.theme.typography.primary};
 	&::-webkit-scrollbar{
 		display: none;
 	}
+	
 }
 
 

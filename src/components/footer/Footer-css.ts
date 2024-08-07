@@ -21,15 +21,16 @@ export const SocialRow = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
+	margin: 1.6rem 0;
 `;
 
 export const SocialLink = styled.a`
-	color: #fff;
+	color: ${(props) => props.theme.typography.primary};
 	font-size: 2rem;
 	height: 4rem;
 	width: 4rem;
 	background-color: transparent;
-	border: 1px solid #fff;
+	border: 1px solid ${(props) => props.theme.typography.primary};
 	text-align: center;
 	border-radius: 50%;
 	display: flex;
@@ -37,7 +38,7 @@ export const SocialLink = styled.a`
 	align-items: center;
 	transition: all 250ms;
 	&:hover {
-		background-color: #fff;
+		background-color: ${(props) => props.theme.typography.primary};
 		color: #8453e8;
 	}
 `;
